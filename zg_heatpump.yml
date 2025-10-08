@@ -1,0 +1,33 @@
+name: zg_heatpump
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - pandas
+  - xarray
+  - scipy
+  - bottleneck
+  - pyomo
+  - glpk
+  - coin-or-cbc
+  - ipykernel
+  - pip:
+      - linopy>=0.3
+      - calliope>=0.7
+      - pypsa>=0.25
+      - gurobipy
+      - ordered-set
+      - h5py
+      - plotly
+      - torch
+      - black
+      - transformers
+      - sentencepiece
+      - -e .
+
+#pip install "calliope==0.7.0.dev7"
+#pip install linopy>=0.3 pypsa xarray pandas numpy ordered-set black
+#pip install -e .
