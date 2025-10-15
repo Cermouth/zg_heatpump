@@ -1,0 +1,5 @@
+Region,Minimum_Cost
+Europe,"<xarray.DataArray 'regional_cost_total' (set_time_steps_yearly: 14)> Size: 112B
+array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+Coordinates:
+  * set_time_steps_yearly  (set_time_steps_yearly) int64 112B 0 1 2 ... 11 12 13"

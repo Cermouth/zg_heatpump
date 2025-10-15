@@ -1,0 +1,46 @@
+{
+   "carbon_intensity_carrier_import": {
+    "default_value": 1398,
+    "unit": "tons/tons"
+  },
+  "carbon_intensity_carrier_export": {
+    "default_value": 0.0,
+    "unit": "tons/tons"
+  },
+  "demand": {
+    "default_value": 0.0,
+    "unit": "kilotons/year"
+  },
+  "price_shed_demand": {
+    "default_value": "inf",
+    "unit": "Euro/tons"
+  },
+  "availability_import": {
+    "default_value": "inf",
+    "unit": "kiloton/year"
+  },
+  "availability_export": {
+    "default_value": 0.0,
+    "unit": "kilotons/year"
+  },
+  "availability_import_yearly": {
+    "default_value": "inf",
+    "unit": "kilotons"
+  },
+  "availability_export_yearly": {
+    "default_value": 0.0,
+    "unit": "kilotons"
+  },
+  "price_export": {
+    "default_value": 0.0,
+    "unit": "Euro/tons"
+  },
+  "price_import": {
+    "default_value": 0.0023,
+    "unit": "Euro/kilogram"
+  },
+  "local_production_share": {
+    "default_value": 0,
+    "unit": "1"
+  }
+}

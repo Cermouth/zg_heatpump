@@ -1,0 +1,135 @@
+{
+  "capacity_addition_min": {
+    "default_value": 0.0,
+    "unit": "kilotons/year"
+  },
+  "capacity_addition_max": {
+    "default_value": "inf",
+    "unit": "kilotons/year"
+  },
+  "capacity_existing": {
+    "default_value": "inf",
+    "unit": "kilotons/year"
+  },
+  "capacity_limit": {
+    "default_value": "inf",
+    "unit": "kilotons/year"
+  },
+  "min_load": {
+    "default_value": 0.0,
+    "unit": "1"
+  },
+  "max_load": {
+    "default_value": 1.0,
+    "unit": "1"
+  },
+  "lifetime": {
+    "default_value": 100.0,
+    "unit": "1"
+  },
+  "opex_specific_variable": {
+    "default_value": 0.0,
+    "unit": "kiloEuro/kilotons"
+  },
+  "reference_carrier": {
+    "default_value": [
+      "Steel"
+    ]
+  },
+  "carbon_intensity_technology": {
+    "default_value": 0.0,
+    "unit": "kilotons/kilotons"
+  },
+  "construction_time": {
+    "default_value": 0.0,
+    "unit": "1"
+  },
+  "capacity_investment_existing": {
+    "default_value": 0.0,
+    "unit": "kilotons/year"
+  },
+  "opex_specific_fixed": {
+    "default_value": 135.74,
+    "unit": "kiloEuro/kilotons*year"
+  },
+  "max_diffusion_rate": {
+    "default_value": "inf",
+    "unit": "1"
+  },
+  "efficiency_charge": {
+    "default_value": 0.9746794344808963,
+    "unit": "1"
+  },
+  "efficiency_discharge": {
+    "default_value": 0.9746794344808963,
+    "unit": "1"
+  },
+  "energy_to_power_ratio_min": {
+    "default_value": 0.0,
+    "unit": "year"
+  },
+  "energy_to_power_ratio_max": {
+    "default_value": 100,
+    "unit": "year"
+  },
+  "self_discharge": {
+    "default_value": 0.0,
+    "unit": "1"
+  },
+  "capex_specific_storage": {
+    "default_value": 238.68,
+    "unit": "Euro/kilotons*year"
+  },
+  "capacity_addition_min_energy": {
+    "default_value": 0.0,
+    "unit": "kilotons"
+  },
+  "capacity_addition_max_energy": {
+    "default_value": "inf",
+    "unit": "kilotons"
+  },
+  "capacity_existing_energy": {
+    "default_value": 0.0,
+    "unit": "kilotons"
+  },
+  "capacity_limit_energy": {
+    "default_value": "inf",
+    "unit": "kilotons"
+  },
+  "min_load_energy": {
+    "default_value": 0.0,
+    "unit": "1"
+  },
+  "max_load_energy": {
+    "default_value": 1.0,
+    "unit": "1"
+  },
+  "capacity_investment_existing_energy": {
+    "default_value": 0.0,
+    "unit": "kilotons"
+  },
+  "opex_specific_fixed_energy": {
+    "default_value": 55.54,
+    "unit": "Euro/kilotons"
+  },
+  "capex_specific_storage_energy": {
+    "default_value": 3.43,
+    "unit": "Euro/kilotons"
+  },
+  "capacity_addition_unbounded": {
+    "default_value": 0.0,
+    "unit": "kilotons/year"
+  },
+  "material_transport_cost": {
+    "default_value": 0.0,
+    "unit": "kiloEuro/kilotons/km*year"
+  },
+  "employee_technology": {
+    "default_value": 0.0,
+    "unit": "1/MW"
+  },
+  "trade_technology": {
+    "default_value": 0.0,
+    "unit": "1/MW"
+  }
+}

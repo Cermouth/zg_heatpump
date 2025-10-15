@@ -1,0 +1,101 @@
+{
+  "DemandMet": {
+    "HP": {
+      "price_shed_demand": {
+        "file": "price_shed_demand_S1"
+      }
+    },
+    "HP_assembly": {
+      "capacity_limit": {
+        "file": "capacity_limit_S1"
+      }
+    }
+  },
+  "SelfSuff40": {
+    "HP": {
+      "local_production_share": {
+        "file": "local_production_share_S2"
+      },
+      "price_shed_demand": {
+        "file": "price_shed_demand_S1"
+      }
+    },
+    "Compressor": {
+      "local_production_share": {
+        "file": "local_production_share_S2"
+      }
+    },
+    "HEX": {
+      "local_production_share": {
+        "file": "local_production_share_S2"
+      }
+    },
+    "HP_assembly": {
+      "capacity_limit": {
+        "file": "capacity_limit_S2"
+      },
+      "min_load": {
+        "file": "min_load_S1"
+      }
+    }
+  },
+  "Tariffs": {
+    "set_transport_technologies": {
+      "opex_specific_variable": {
+      "file": "opex_specific_variable_S5" }
+    },
+    "HP": {
+      "price_shed_demand": {
+        "file": "price_shed_demand_S1"
+      }
+    },
+    "HP_assembly": {
+      "capacity_limit": {
+        "file": "capacity_limit_S1"
+      }
+    }
+  },
+  "FastDiffusion": {
+    "EnergySystem": {
+      "knowledge_spillover_rate": {
+        "default_op": 10
+      }
+    },
+    "HP": {
+      "price_shed_demand": {
+        "file": "price_shed_demand_S1"
+      }
+    },
+    "HP_assembly": {
+      "capacity_limit": {
+        "file": "capacity_limit_S1"
+      }},
+    "set_conversion_technologies": {
+      "max_diffusion_rate": {
+        "file": "max_diffusion_rate_S4"
+      }
+    }
+  },
+  "Recycling": {
+    "Copper_recycling": {
+      "capacity_existing": {
+        "file": "capacity_existing_S6"
+      }
+    },
+    "Nickel_recycling": {
+      "capacity_existing": {
+        "file": "capacity_existing_S6"
+      }
+    },
+    "HP": {
+      "price_shed_demand": {
+        "file": "price_shed_demand_S1"
+      }
+    },
+    "HP_assembly": {
+      "capacity_limit": {
+        "file": "capacity_limit_S1"
+      }
+    }
+  }
+}

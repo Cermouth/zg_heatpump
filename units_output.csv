@@ -1,0 +1,13 @@
+technology,carrier,0
+Aluminium_production,Aluminium,kiloton / year
+Bauxite_mining,Bauxite,kiloton / year
+Compressor_manufacturing,Compressor,gigawatt
+Copper_mining,Copper_ore,kiloton / year
+Copper_recycling,Copper,kiloton / year
+Copper_refinement,Copper,kiloton / year
+HEX_manufacturing,HEX,gigawatt
+HP_assembly,HP,gigawatt
+Iron_mining,Iron,kiloton / year
+Nickel_mining,Nickel,kiloton / year
+Nickel_recycling,Nickel,kiloton / year
+Steel_production,Steel,kiloton / year

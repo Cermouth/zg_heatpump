@@ -1,0 +1,5 @@
+Euro = [currency] = EUR = Eur = €
+year = 8760 * hour = yr
+megatons = 1000 * kilotons = Megaton = Mt
+kiloton = 1000 * ton = Kiloton = kt
+megaEuro = 1000000 * Euro

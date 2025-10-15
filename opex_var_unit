@@ -1,0 +1,33 @@
+technology,0
+Aluminium_production,kiloEuro / kiloton
+Aluminium_storage,kiloEuro / kiloton
+Aluminium_transport,kiloEuro / kiloton
+Bauxite_mining,kiloEuro / kiloton
+Bauxite_storage,kiloEuro / kiloton
+Bauxite_transport,kiloEuro / kiloton
+Compressor_manufacturing,kiloEuro / gigawatt / year
+Compressor_storage,kiloEuro / gigawatt / year
+Compressor_transport,kiloEuro / gigawatt / year
+Copper_mining,kiloEuro / kiloton
+Copper_ore_transport,kiloEuro / kiloton
+Copper_recycling,kiloEuro / kiloton
+Copper_refinement,kiloEuro / kiloton
+Copper_storage,kiloEuro / kiloton
+Copper_transport,kiloEuro / kiloton
+HEX_manufacturing,kiloEuro / gigawatt / year
+HEX_storage,kiloEuro / gigawatt / year
+HEX_transport,kiloEuro / gigawatt / year
+HP_assembly,kiloEuro / gigawatt / year
+HP_storage,kiloEuro / gigawatt / year
+HP_transport,kiloEuro / gigawatt / year
+Iron_mining,kiloEuro / kiloton
+Iron_storage,kiloEuro / kiloton
+Iron_transport,kiloEuro / kiloton
+Nickel_mining,kiloEuro / kiloton
+Nickel_recycling,kiloEuro / kiloton
+Nickel_storage,kiloEuro / kiloton
+Nickel_transport,kiloEuro / kiloton
+Refrigerant_transport,kiloEuro / kiloton
+Steel_production,kiloEuro / kiloton
+Steel_storage,kiloEuro / kiloton
+Steel_transport,kiloEuro / kiloton

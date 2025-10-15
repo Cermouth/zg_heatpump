@@ -1,0 +1,7002 @@
+{
+    "MC1_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC1"
+            }
+        }
+    },
+    "MC2_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC2"
+            }
+        }
+    },
+    "MC3_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC3"
+            }
+        }
+    },
+    "MC4_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC4"
+            }
+        }
+    },
+    "MC5_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC5"
+            }
+        }
+    },
+    "MC6_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC6"
+            }
+        }
+    },
+    "MC7_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC7"
+            }
+        }
+    },
+    "MC8_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC8"
+            }
+        }
+    },
+    "MC9_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC9"
+            }
+        }
+    },
+    "MC10_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC10"
+            }
+        }
+    },
+    "MC11_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC11"
+            }
+        }
+    },
+    "MC12_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC12"
+            }
+        }
+    },
+    "MC13_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC13"
+            }
+        }
+    },
+    "MC14_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC14"
+            }
+        }
+    },
+    "MC15_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC15"
+            }
+        }
+    },
+    "MC16_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC16"
+            }
+        }
+    },
+    "MC17_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC17"
+            }
+        }
+    },
+    "MC18_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC18"
+            }
+        }
+    },
+    "MC19_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC19"
+            }
+        }
+    },
+    "MC20_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC20"
+            }
+        }
+    },
+    "MC21_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC21"
+            }
+        }
+    },
+    "MC22_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC22"
+            }
+        }
+    },
+    "MC23_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC23"
+            }
+        }
+    },
+    "MC24_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC24"
+            }
+        }
+    },
+    "MC25_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC25"
+            }
+        }
+    },
+    "MC26_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC26"
+            }
+        }
+    },
+    "MC27_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC27"
+            }
+        }
+    },
+    "MC28_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC28"
+            }
+        }
+    },
+    "MC29_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC29"
+            }
+        }
+    },
+    "MC30_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC30"
+            }
+        }
+    },
+    "MC31_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC31"
+            }
+        }
+    },
+    "MC32_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC32"
+            }
+        }
+    },
+    "MC33_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC33"
+            }
+        }
+    },
+    "MC34_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC34"
+            }
+        }
+    },
+    "MC35_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC35"
+            }
+        }
+    },
+    "MC36_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC36"
+            }
+        }
+    },
+    "MC37_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC37"
+            }
+        }
+    },
+    "MC38_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC38"
+            }
+        }
+    },
+    "MC39_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC39"
+            }
+        }
+    },
+    "MC40_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC40"
+            }
+        }
+    },
+    "MC41_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC41"
+            }
+        }
+    },
+    "MC42_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC42"
+            }
+        }
+    },
+    "MC43_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC43"
+            }
+        }
+    },
+    "MC44_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC44"
+            }
+        }
+    },
+    "MC45_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC45"
+            }
+        }
+    },
+    "MC46_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC46"
+            }
+        }
+    },
+    "MC47_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC47"
+            }
+        }
+    },
+    "MC48_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC48"
+            }
+        }
+    },
+    "MC49_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC49"
+            }
+        }
+    },
+    "MC50_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC50"
+            }
+        }
+    },
+    "MC51_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC51"
+            }
+        }
+    },
+    "MC52_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC52"
+            }
+        }
+    },
+    "MC53_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC53"
+            }
+        }
+    },
+    "MC54_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC54"
+            }
+        }
+    },
+    "MC55_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC55"
+            }
+        }
+    },
+    "MC56_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC56"
+            }
+        }
+    },
+    "MC57_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC57"
+            }
+        }
+    },
+    "MC58_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC58"
+            }
+        }
+    },
+    "MC59_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC59"
+            }
+        }
+    },
+    "MC60_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC60"
+            }
+        }
+    },
+    "MC61_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC61"
+            }
+        }
+    },
+    "MC62_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC62"
+            }
+        }
+    },
+    "MC63_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC63"
+            }
+        }
+    },
+    "MC64_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC64"
+            }
+        }
+    },
+    "MC65_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC65"
+            }
+        }
+    },
+    "MC66_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC66"
+            }
+        }
+    },
+    "MC67_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC67"
+            }
+        }
+    },
+    "MC68_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC68"
+            }
+        }
+    },
+    "MC69_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC69"
+            }
+        }
+    },
+    "MC70_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC70"
+            }
+        }
+    },
+    "MC71_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC71"
+            }
+        }
+    },
+    "MC72_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC72"
+            }
+        }
+    },
+    "MC73_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC73"
+            }
+        }
+    },
+    "MC74_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC74"
+            }
+        }
+    },
+    "MC75_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC75"
+            }
+        }
+    },
+    "MC76_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC76"
+            }
+        }
+    },
+    "MC77_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC77"
+            }
+        }
+    },
+    "MC78_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC78"
+            }
+        }
+    },
+    "MC79_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC79"
+            }
+        }
+    },
+    "MC80_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC80"
+            }
+        }
+    },
+    "MC81_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC81"
+            }
+        }
+    },
+    "MC82_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC82"
+            }
+        }
+    },
+    "MC83_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC83"
+            }
+        }
+    },
+    "MC84_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC84"
+            }
+        }
+    },
+    "MC85_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC85"
+            }
+        }
+    },
+    "MC86_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC86"
+            }
+        }
+    },
+    "MC87_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC87"
+            }
+        }
+    },
+    "MC88_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC88"
+            }
+        }
+    },
+    "MC89_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC89"
+            }
+        }
+    },
+    "MC90_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC90"
+            }
+        }
+    },
+    "MC91_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC91"
+            }
+        }
+    },
+    "MC92_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC92"
+            }
+        }
+    },
+    "MC93_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC93"
+            }
+        }
+    },
+    "MC94_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC94"
+            }
+        }
+    },
+    "MC95_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC95"
+            }
+        }
+    },
+    "MC96_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC96"
+            }
+        }
+    },
+    "MC97_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC97"
+            }
+        }
+    },
+    "MC98_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC98"
+            }
+        }
+    },
+    "MC99_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC99"
+            }
+        }
+    },
+    "MC100_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC100"
+            }
+        }
+    },
+    "MC101_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC101"
+            }
+        }
+    },
+    "MC102_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC102"
+            }
+        }
+    },
+    "MC103_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC103"
+            }
+        }
+    },
+    "MC104_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC104"
+            }
+        }
+    },
+    "MC105_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC105"
+            }
+        }
+    },
+    "MC106_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC106"
+            }
+        }
+    },
+    "MC107_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC107"
+            }
+        }
+    },
+    "MC108_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC108"
+            }
+        }
+    },
+    "MC109_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC109"
+            }
+        }
+    },
+    "MC110_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC110"
+            }
+        }
+    },
+    "MC111_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC111"
+            }
+        }
+    },
+    "MC112_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC112"
+            }
+        }
+    },
+    "MC113_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC113"
+            }
+        }
+    },
+    "MC114_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC114"
+            }
+        }
+    },
+    "MC115_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC115"
+            }
+        }
+    },
+    "MC116_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC116"
+            }
+        }
+    },
+    "MC117_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC117"
+            }
+        }
+    },
+    "MC118_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC118"
+            }
+        }
+    },
+    "MC119_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC119"
+            }
+        }
+    },
+    "MC120_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC120"
+            }
+        }
+    },
+    "MC121_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC121"
+            }
+        }
+    },
+    "MC122_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC122"
+            }
+        }
+    },
+    "MC123_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC123"
+            }
+        }
+    },
+    "MC124_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC124"
+            }
+        }
+    },
+    "MC125_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC125"
+            }
+        }
+    },
+    "MC126_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC126"
+            }
+        }
+    },
+    "MC127_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC127"
+            }
+        }
+    },
+    "MC128_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC128"
+            }
+        }
+    },
+    "MC129_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC129"
+            }
+        }
+    },
+    "MC130_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC130"
+            }
+        }
+    },
+    "MC131_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC131"
+            }
+        }
+    },
+    "MC132_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC132"
+            }
+        }
+    },
+    "MC133_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC133"
+            }
+        }
+    },
+    "MC134_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC134"
+            }
+        }
+    },
+    "MC135_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC135"
+            }
+        }
+    },
+    "MC136_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC136"
+            }
+        }
+    },
+    "MC137_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC137"
+            }
+        }
+    },
+    "MC138_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC138"
+            }
+        }
+    },
+    "MC139_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC139"
+            }
+        }
+    },
+    "MC140_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC140"
+            }
+        }
+    },
+    "MC141_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC141"
+            }
+        }
+    },
+    "MC142_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC142"
+            }
+        }
+    },
+    "MC143_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC143"
+            }
+        }
+    },
+    "MC144_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC144"
+            }
+        }
+    },
+    "MC145_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC145"
+            }
+        }
+    },
+    "MC146_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC146"
+            }
+        }
+    },
+    "MC147_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC147"
+            }
+        }
+    },
+    "MC148_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC148"
+            }
+        }
+    },
+    "MC149_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC149"
+            }
+        }
+    },
+    "MC150_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC150"
+            }
+        }
+    },
+    "MC151_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC151"
+            }
+        }
+    },
+    "MC152_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC152"
+            }
+        }
+    },
+    "MC153_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC153"
+            }
+        }
+    },
+    "MC154_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC154"
+            }
+        }
+    },
+    "MC155_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC155"
+            }
+        }
+    },
+    "MC156_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC156"
+            }
+        }
+    },
+    "MC157_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC157"
+            }
+        }
+    },
+    "MC158_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC158"
+            }
+        }
+    },
+    "MC159_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC159"
+            }
+        }
+    },
+    "MC160_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC160"
+            }
+        }
+    },
+    "MC161_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC161"
+            }
+        }
+    },
+    "MC162_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC162"
+            }
+        }
+    },
+    "MC163_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC163"
+            }
+        }
+    },
+    "MC164_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC164"
+            }
+        }
+    },
+    "MC165_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC165"
+            }
+        }
+    },
+    "MC166_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC166"
+            }
+        }
+    },
+    "MC167_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC167"
+            }
+        }
+    },
+    "MC168_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC168"
+            }
+        }
+    },
+    "MC169_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC169"
+            }
+        }
+    },
+    "MC170_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC170"
+            }
+        }
+    },
+    "MC171_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC171"
+            }
+        }
+    },
+    "MC172_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC172"
+            }
+        }
+    },
+    "MC173_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC173"
+            }
+        }
+    },
+    "MC174_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC174"
+            }
+        }
+    },
+    "MC175_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC175"
+            }
+        }
+    },
+    "MC176_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC176"
+            }
+        }
+    },
+    "MC177_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC177"
+            }
+        }
+    },
+    "MC178_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC178"
+            }
+        }
+    },
+    "MC179_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC179"
+            }
+        }
+    },
+    "MC180_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC180"
+            }
+        }
+    },
+    "MC181_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC181"
+            }
+        }
+    },
+    "MC182_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC182"
+            }
+        }
+    },
+    "MC183_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC183"
+            }
+        }
+    },
+    "MC184_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC184"
+            }
+        }
+    },
+    "MC185_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC185"
+            }
+        }
+    },
+    "MC186_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC186"
+            }
+        }
+    },
+    "MC187_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC187"
+            }
+        }
+    },
+    "MC188_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC188"
+            }
+        }
+    },
+    "MC189_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC189"
+            }
+        }
+    },
+    "MC190_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC190"
+            }
+        }
+    },
+    "MC191_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC191"
+            }
+        }
+    },
+    "MC192_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC192"
+            }
+        }
+    },
+    "MC193_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC193"
+            }
+        }
+    },
+    "MC194_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC194"
+            }
+        }
+    },
+    "MC195_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC195"
+            }
+        }
+    },
+    "MC196_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC196"
+            }
+        }
+    },
+    "MC197_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC197"
+            }
+        }
+    },
+    "MC198_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC198"
+            }
+        }
+    },
+    "MC199_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC199"
+            }
+        }
+    },
+    "MC200_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC200"
+            }
+        }
+    },
+    "MC201_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC201"
+            }
+        }
+    },
+    "MC202_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC202"
+            }
+        }
+    },
+    "MC203_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC203"
+            }
+        }
+    },
+    "MC204_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC204"
+            }
+        }
+    },
+    "MC205_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC205"
+            }
+        }
+    },
+    "MC206_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC206"
+            }
+        }
+    },
+    "MC207_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC207"
+            }
+        }
+    },
+    "MC208_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC208"
+            }
+        }
+    },
+    "MC209_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC209"
+            }
+        }
+    },
+    "MC210_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC210"
+            }
+        }
+    },
+    "MC211_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC211"
+            }
+        }
+    },
+    "MC212_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC212"
+            }
+        }
+    },
+    "MC213_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC213"
+            }
+        }
+    },
+    "MC214_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC214"
+            }
+        }
+    },
+    "MC215_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC215"
+            }
+        }
+    },
+    "MC216_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC216"
+            }
+        }
+    },
+    "MC217_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC217"
+            }
+        }
+    },
+    "MC218_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC218"
+            }
+        }
+    },
+    "MC219_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC219"
+            }
+        }
+    },
+    "MC220_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC220"
+            }
+        }
+    },
+    "MC221_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC221"
+            }
+        }
+    },
+    "MC222_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC222"
+            }
+        }
+    },
+    "MC223_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC223"
+            }
+        }
+    },
+    "MC224_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC224"
+            }
+        }
+    },
+    "MC225_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC225"
+            }
+        }
+    },
+    "MC226_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC226"
+            }
+        }
+    },
+    "MC227_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC227"
+            }
+        }
+    },
+    "MC228_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC228"
+            }
+        }
+    },
+    "MC229_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC229"
+            }
+        }
+    },
+    "MC230_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC230"
+            }
+        }
+    },
+    "MC231_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC231"
+            }
+        }
+    },
+    "MC232_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC232"
+            }
+        }
+    },
+    "MC233_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC233"
+            }
+        }
+    },
+    "MC234_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC234"
+            }
+        }
+    },
+    "MC235_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC235"
+            }
+        }
+    },
+    "MC236_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC236"
+            }
+        }
+    },
+    "MC237_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC237"
+            }
+        }
+    },
+    "MC238_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC238"
+            }
+        }
+    },
+    "MC239_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC239"
+            }
+        }
+    },
+    "MC240_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC240"
+            }
+        }
+    },
+    "MC241_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC241"
+            }
+        }
+    },
+    "MC242_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC242"
+            }
+        }
+    },
+    "MC243_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC243"
+            }
+        }
+    },
+    "MC244_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC244"
+            }
+        }
+    },
+    "MC245_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC245"
+            }
+        }
+    },
+    "MC246_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC246"
+            }
+        }
+    },
+    "MC247_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC247"
+            }
+        }
+    },
+    "MC248_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC248"
+            }
+        }
+    },
+    "MC249_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC249"
+            }
+        }
+    },
+    "MC250_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC250"
+            }
+        }
+    },
+    "MC251_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC251"
+            }
+        }
+    },
+    "MC252_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC252"
+            }
+        }
+    },
+    "MC253_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC253"
+            }
+        }
+    },
+    "MC254_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC254"
+            }
+        }
+    },
+    "MC255_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC255"
+            }
+        }
+    },
+    "MC256_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC256"
+            }
+        }
+    },
+    "MC257_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC257"
+            }
+        }
+    },
+    "MC258_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC258"
+            }
+        }
+    },
+    "MC259_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC259"
+            }
+        }
+    },
+    "MC260_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC260"
+            }
+        }
+    },
+    "MC261_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC261"
+            }
+        }
+    },
+    "MC262_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC262"
+            }
+        }
+    },
+    "MC263_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC263"
+            }
+        }
+    },
+    "MC264_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC264"
+            }
+        }
+    },
+    "MC265_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC265"
+            }
+        }
+    },
+    "MC266_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC266"
+            }
+        }
+    },
+    "MC267_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC267"
+            }
+        }
+    },
+    "MC268_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC268"
+            }
+        }
+    },
+    "MC269_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC269"
+            }
+        }
+    },
+    "MC270_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC270"
+            }
+        }
+    },
+    "MC271_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC271"
+            }
+        }
+    },
+    "MC272_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC272"
+            }
+        }
+    },
+    "MC273_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC273"
+            }
+        }
+    },
+    "MC274_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC274"
+            }
+        }
+    },
+    "MC275_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC275"
+            }
+        }
+    },
+    "MC276_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC276"
+            }
+        }
+    },
+    "MC277_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC277"
+            }
+        }
+    },
+    "MC278_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC278"
+            }
+        }
+    },
+    "MC279_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC279"
+            }
+        }
+    },
+    "MC280_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC280"
+            }
+        }
+    },
+    "MC281_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC281"
+            }
+        }
+    },
+    "MC282_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC282"
+            }
+        }
+    },
+    "MC283_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC283"
+            }
+        }
+    },
+    "MC284_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC284"
+            }
+        }
+    },
+    "MC285_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC285"
+            }
+        }
+    },
+    "MC286_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC286"
+            }
+        }
+    },
+    "MC287_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC287"
+            }
+        }
+    },
+    "MC288_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC288"
+            }
+        }
+    },
+    "MC289_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC289"
+            }
+        }
+    },
+    "MC290_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC290"
+            }
+        }
+    },
+    "MC291_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC291"
+            }
+        }
+    },
+    "MC292_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC292"
+            }
+        }
+    },
+    "MC293_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC293"
+            }
+        }
+    },
+    "MC294_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC294"
+            }
+        }
+    },
+    "MC295_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC295"
+            }
+        }
+    },
+    "MC296_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC296"
+            }
+        }
+    },
+    "MC297_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC297"
+            }
+        }
+    },
+    "MC298_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC298"
+            }
+        }
+    },
+    "MC299_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC299"
+            }
+        }
+    },
+    "MC300_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC300"
+            }
+        }
+    },
+    "MC301_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC301"
+            }
+        }
+    },
+    "MC302_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC302"
+            }
+        }
+    },
+    "MC303_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC303"
+            }
+        }
+    },
+    "MC304_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC304"
+            }
+        }
+    },
+    "MC305_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC305"
+            }
+        }
+    },
+    "MC306_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC306"
+            }
+        }
+    },
+    "MC307_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC307"
+            }
+        }
+    },
+    "MC308_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC308"
+            }
+        }
+    },
+    "MC309_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC309"
+            }
+        }
+    },
+    "MC310_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC310"
+            }
+        }
+    },
+    "MC311_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC311"
+            }
+        }
+    },
+    "MC312_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC312"
+            }
+        }
+    },
+    "MC313_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC313"
+            }
+        }
+    },
+    "MC314_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC314"
+            }
+        }
+    },
+    "MC315_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC315"
+            }
+        }
+    },
+    "MC316_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC316"
+            }
+        }
+    },
+    "MC317_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC317"
+            }
+        }
+    },
+    "MC318_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC318"
+            }
+        }
+    },
+    "MC319_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC319"
+            }
+        }
+    },
+    "MC320_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC320"
+            }
+        }
+    },
+    "MC321_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC321"
+            }
+        }
+    },
+    "MC322_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC322"
+            }
+        }
+    },
+    "MC323_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC323"
+            }
+        }
+    },
+    "MC324_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC324"
+            }
+        }
+    },
+    "MC325_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC325"
+            }
+        }
+    },
+    "MC326_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC326"
+            }
+        }
+    },
+    "MC327_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC327"
+            }
+        }
+    },
+    "MC328_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC328"
+            }
+        }
+    },
+    "MC329_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC329"
+            }
+        }
+    },
+    "MC330_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC330"
+            }
+        }
+    },
+    "MC331_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC331"
+            }
+        }
+    },
+    "MC332_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC332"
+            }
+        }
+    },
+    "MC333_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC333"
+            }
+        }
+    },
+    "MC334_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC334"
+            }
+        }
+    },
+    "MC335_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC335"
+            }
+        }
+    },
+    "MC336_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC336"
+            }
+        }
+    },
+    "MC337_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC337"
+            }
+        }
+    },
+    "MC338_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC338"
+            }
+        }
+    },
+    "MC339_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC339"
+            }
+        }
+    },
+    "MC340_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC340"
+            }
+        }
+    },
+    "MC341_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC341"
+            }
+        }
+    },
+    "MC342_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC342"
+            }
+        }
+    },
+    "MC343_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC343"
+            }
+        }
+    },
+    "MC344_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC344"
+            }
+        }
+    },
+    "MC345_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC345"
+            }
+        }
+    },
+    "MC346_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC346"
+            }
+        }
+    },
+    "MC347_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC347"
+            }
+        }
+    },
+    "MC348_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC348"
+            }
+        }
+    },
+    "MC349_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC349"
+            }
+        }
+    },
+    "MC350_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC350"
+            }
+        }
+    },
+    "MC351_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC351"
+            }
+        }
+    },
+    "MC352_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC352"
+            }
+        }
+    },
+    "MC353_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC353"
+            }
+        }
+    },
+    "MC354_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC354"
+            }
+        }
+    },
+    "MC355_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC355"
+            }
+        }
+    },
+    "MC356_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC356"
+            }
+        }
+    },
+    "MC357_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC357"
+            }
+        }
+    },
+    "MC358_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC358"
+            }
+        }
+    },
+    "MC359_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC359"
+            }
+        }
+    },
+    "MC360_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC360"
+            }
+        }
+    },
+    "MC361_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC361"
+            }
+        }
+    },
+    "MC362_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC362"
+            }
+        }
+    },
+    "MC363_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC363"
+            }
+        }
+    },
+    "MC364_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC364"
+            }
+        }
+    },
+    "MC365_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC365"
+            }
+        }
+    },
+    "MC366_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC366"
+            }
+        }
+    },
+    "MC367_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC367"
+            }
+        }
+    },
+    "MC368_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC368"
+            }
+        }
+    },
+    "MC369_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC369"
+            }
+        }
+    },
+    "MC370_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC370"
+            }
+        }
+    },
+    "MC371_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC371"
+            }
+        }
+    },
+    "MC372_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC372"
+            }
+        }
+    },
+    "MC373_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC373"
+            }
+        }
+    },
+    "MC374_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC374"
+            }
+        }
+    },
+    "MC375_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC375"
+            }
+        }
+    },
+    "MC376_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC376"
+            }
+        }
+    },
+    "MC377_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC377"
+            }
+        }
+    },
+    "MC378_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC378"
+            }
+        }
+    },
+    "MC379_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC379"
+            }
+        }
+    },
+    "MC380_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC380"
+            }
+        }
+    },
+    "MC381_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC381"
+            }
+        }
+    },
+    "MC382_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC382"
+            }
+        }
+    },
+    "MC383_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC383"
+            }
+        }
+    },
+    "MC384_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC384"
+            }
+        }
+    },
+    "MC385_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC385"
+            }
+        }
+    },
+    "MC386_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC386"
+            }
+        }
+    },
+    "MC387_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC387"
+            }
+        }
+    },
+    "MC388_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC388"
+            }
+        }
+    },
+    "MC389_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC389"
+            }
+        }
+    },
+    "MC390_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC390"
+            }
+        }
+    },
+    "MC391_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC391"
+            }
+        }
+    },
+    "MC392_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC392"
+            }
+        }
+    },
+    "MC393_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC393"
+            }
+        }
+    },
+    "MC394_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC394"
+            }
+        }
+    },
+    "MC395_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC395"
+            }
+        }
+    },
+    "MC396_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC396"
+            }
+        }
+    },
+    "MC397_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC397"
+            }
+        }
+    },
+    "MC398_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC398"
+            }
+        }
+    },
+    "MC399_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC399"
+            }
+        }
+    },
+    "MC400_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC400"
+            }
+        }
+    },
+    "MC401_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC401"
+            }
+        }
+    },
+    "MC402_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC402"
+            }
+        }
+    },
+    "MC403_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC403"
+            }
+        }
+    },
+    "MC404_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC404"
+            }
+        }
+    },
+    "MC405_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC405"
+            }
+        }
+    },
+    "MC406_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC406"
+            }
+        }
+    },
+    "MC407_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC407"
+            }
+        }
+    },
+    "MC408_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC408"
+            }
+        }
+    },
+    "MC409_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC409"
+            }
+        }
+    },
+    "MC410_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC410"
+            }
+        }
+    },
+    "MC411_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC411"
+            }
+        }
+    },
+    "MC412_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC412"
+            }
+        }
+    },
+    "MC413_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC413"
+            }
+        }
+    },
+    "MC414_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC414"
+            }
+        }
+    },
+    "MC415_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC415"
+            }
+        }
+    },
+    "MC416_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC416"
+            }
+        }
+    },
+    "MC417_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC417"
+            }
+        }
+    },
+    "MC418_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC418"
+            }
+        }
+    },
+    "MC419_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC419"
+            }
+        }
+    },
+    "MC420_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC420"
+            }
+        }
+    },
+    "MC421_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC421"
+            }
+        }
+    },
+    "MC422_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC422"
+            }
+        }
+    },
+    "MC423_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC423"
+            }
+        }
+    },
+    "MC424_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC424"
+            }
+        }
+    },
+    "MC425_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC425"
+            }
+        }
+    },
+    "MC426_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC426"
+            }
+        }
+    },
+    "MC427_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC427"
+            }
+        }
+    },
+    "MC428_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC428"
+            }
+        }
+    },
+    "MC429_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC429"
+            }
+        }
+    },
+    "MC430_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC430"
+            }
+        }
+    },
+    "MC431_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC431"
+            }
+        }
+    },
+    "MC432_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC432"
+            }
+        }
+    },
+    "MC433_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC433"
+            }
+        }
+    },
+    "MC434_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC434"
+            }
+        }
+    },
+    "MC435_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC435"
+            }
+        }
+    },
+    "MC436_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC436"
+            }
+        }
+    },
+    "MC437_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC437"
+            }
+        }
+    },
+    "MC438_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC438"
+            }
+        }
+    },
+    "MC439_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC439"
+            }
+        }
+    },
+    "MC440_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC440"
+            }
+        }
+    },
+    "MC441_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC441"
+            }
+        }
+    },
+    "MC442_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC442"
+            }
+        }
+    },
+    "MC443_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC443"
+            }
+        }
+    },
+    "MC444_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC444"
+            }
+        }
+    },
+    "MC445_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC445"
+            }
+        }
+    },
+    "MC446_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC446"
+            }
+        }
+    },
+    "MC447_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC447"
+            }
+        }
+    },
+    "MC448_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC448"
+            }
+        }
+    },
+    "MC449_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC449"
+            }
+        }
+    },
+    "MC450_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC450"
+            }
+        }
+    },
+    "MC451_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC451"
+            }
+        }
+    },
+    "MC452_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC452"
+            }
+        }
+    },
+    "MC453_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC453"
+            }
+        }
+    },
+    "MC454_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC454"
+            }
+        }
+    },
+    "MC455_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC455"
+            }
+        }
+    },
+    "MC456_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC456"
+            }
+        }
+    },
+    "MC457_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC457"
+            }
+        }
+    },
+    "MC458_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC458"
+            }
+        }
+    },
+    "MC459_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC459"
+            }
+        }
+    },
+    "MC460_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC460"
+            }
+        }
+    },
+    "MC461_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC461"
+            }
+        }
+    },
+    "MC462_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC462"
+            }
+        }
+    },
+    "MC463_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC463"
+            }
+        }
+    },
+    "MC464_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC464"
+            }
+        }
+    },
+    "MC465_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC465"
+            }
+        }
+    },
+    "MC466_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC466"
+            }
+        }
+    },
+    "MC467_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC467"
+            }
+        }
+    },
+    "MC468_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC468"
+            }
+        }
+    },
+    "MC469_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC469"
+            }
+        }
+    },
+    "MC470_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC470"
+            }
+        }
+    },
+    "MC471_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC471"
+            }
+        }
+    },
+    "MC472_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC472"
+            }
+        }
+    },
+    "MC473_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC473"
+            }
+        }
+    },
+    "MC474_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC474"
+            }
+        }
+    },
+    "MC475_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC475"
+            }
+        }
+    },
+    "MC476_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC476"
+            }
+        }
+    },
+    "MC477_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC477"
+            }
+        }
+    },
+    "MC478_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC478"
+            }
+        }
+    },
+    "MC479_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC479"
+            }
+        }
+    },
+    "MC480_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC480"
+            }
+        }
+    },
+    "MC481_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC481"
+            }
+        }
+    },
+    "MC482_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC482"
+            }
+        }
+    },
+    "MC483_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC483"
+            }
+        }
+    },
+    "MC484_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC484"
+            }
+        }
+    },
+    "MC485_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC485"
+            }
+        }
+    },
+    "MC486_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC486"
+            }
+        }
+    },
+    "MC487_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC487"
+            }
+        }
+    },
+    "MC488_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC488"
+            }
+        }
+    },
+    "MC489_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC489"
+            }
+        }
+    },
+    "MC490_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC490"
+            }
+        }
+    },
+    "MC491_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC491"
+            }
+        }
+    },
+    "MC492_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC492"
+            }
+        }
+    },
+    "MC493_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC493"
+            }
+        }
+    },
+    "MC494_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC494"
+            }
+        }
+    },
+    "MC495_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC495"
+            }
+        }
+    },
+    "MC496_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC496"
+            }
+        }
+    },
+    "MC497_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC497"
+            }
+        }
+    },
+    "MC498_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC498"
+            }
+        }
+    },
+    "MC499_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC499"
+            }
+        }
+    },
+    "MC500_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC500"
+            }
+        }
+    },
+    "MC501_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC501"
+            }
+        }
+    },
+    "MC502_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC502"
+            }
+        }
+    },
+    "MC503_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC503"
+            }
+        }
+    },
+    "MC504_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC504"
+            }
+        }
+    },
+    "MC505_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC505"
+            }
+        }
+    },
+    "MC506_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC506"
+            }
+        }
+    },
+    "MC507_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC507"
+            }
+        }
+    },
+    "MC508_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC508"
+            }
+        }
+    },
+    "MC509_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC509"
+            }
+        }
+    },
+    "MC510_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC510"
+            }
+        }
+    },
+    "MC511_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC511"
+            }
+        }
+    },
+    "MC512_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC512"
+            }
+        }
+    },
+    "MC513_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC513"
+            }
+        }
+    },
+    "MC514_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC514"
+            }
+        }
+    },
+    "MC515_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC515"
+            }
+        }
+    },
+    "MC516_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC516"
+            }
+        }
+    },
+    "MC517_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC517"
+            }
+        }
+    },
+    "MC518_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC518"
+            }
+        }
+    },
+    "MC519_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC519"
+            }
+        }
+    },
+    "MC520_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC520"
+            }
+        }
+    },
+    "MC521_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC521"
+            }
+        }
+    },
+    "MC522_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC522"
+            }
+        }
+    },
+    "MC523_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC523"
+            }
+        }
+    },
+    "MC524_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC524"
+            }
+        }
+    },
+    "MC525_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC525"
+            }
+        }
+    },
+    "MC526_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC526"
+            }
+        }
+    },
+    "MC527_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC527"
+            }
+        }
+    },
+    "MC528_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC528"
+            }
+        }
+    },
+    "MC529_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC529"
+            }
+        }
+    },
+    "MC530_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC530"
+            }
+        }
+    },
+    "MC531_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC531"
+            }
+        }
+    },
+    "MC532_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC532"
+            }
+        }
+    },
+    "MC533_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC533"
+            }
+        }
+    },
+    "MC534_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC534"
+            }
+        }
+    },
+    "MC535_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC535"
+            }
+        }
+    },
+    "MC536_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC536"
+            }
+        }
+    },
+    "MC537_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC537"
+            }
+        }
+    },
+    "MC538_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC538"
+            }
+        }
+    },
+    "MC539_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC539"
+            }
+        }
+    },
+    "MC540_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC540"
+            }
+        }
+    },
+    "MC541_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC541"
+            }
+        }
+    },
+    "MC542_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC542"
+            }
+        }
+    },
+    "MC543_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC543"
+            }
+        }
+    },
+    "MC544_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC544"
+            }
+        }
+    },
+    "MC545_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC545"
+            }
+        }
+    },
+    "MC546_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC546"
+            }
+        }
+    },
+    "MC547_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC547"
+            }
+        }
+    },
+    "MC548_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC548"
+            }
+        }
+    },
+    "MC549_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC549"
+            }
+        }
+    },
+    "MC550_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC550"
+            }
+        }
+    },
+    "MC551_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC551"
+            }
+        }
+    },
+    "MC552_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC552"
+            }
+        }
+    },
+    "MC553_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC553"
+            }
+        }
+    },
+    "MC554_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC554"
+            }
+        }
+    },
+    "MC555_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC555"
+            }
+        }
+    },
+    "MC556_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC556"
+            }
+        }
+    },
+    "MC557_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC557"
+            }
+        }
+    },
+    "MC558_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC558"
+            }
+        }
+    },
+    "MC559_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC559"
+            }
+        }
+    },
+    "MC560_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC560"
+            }
+        }
+    },
+    "MC561_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC561"
+            }
+        }
+    },
+    "MC562_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC562"
+            }
+        }
+    },
+    "MC563_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC563"
+            }
+        }
+    },
+    "MC564_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC564"
+            }
+        }
+    },
+    "MC565_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC565"
+            }
+        }
+    },
+    "MC566_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC566"
+            }
+        }
+    },
+    "MC567_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC567"
+            }
+        }
+    },
+    "MC568_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC568"
+            }
+        }
+    },
+    "MC569_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC569"
+            }
+        }
+    },
+    "MC570_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC570"
+            }
+        }
+    },
+    "MC571_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC571"
+            }
+        }
+    },
+    "MC572_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC572"
+            }
+        }
+    },
+    "MC573_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC573"
+            }
+        }
+    },
+    "MC574_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC574"
+            }
+        }
+    },
+    "MC575_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC575"
+            }
+        }
+    },
+    "MC576_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC576"
+            }
+        }
+    },
+    "MC577_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC577"
+            }
+        }
+    },
+    "MC578_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC578"
+            }
+        }
+    },
+    "MC579_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC579"
+            }
+        }
+    },
+    "MC580_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC580"
+            }
+        }
+    },
+    "MC581_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC581"
+            }
+        }
+    },
+    "MC582_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC582"
+            }
+        }
+    },
+    "MC583_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC583"
+            }
+        }
+    },
+    "MC584_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC584"
+            }
+        }
+    },
+    "MC585_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC585"
+            }
+        }
+    },
+    "MC586_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC586"
+            }
+        }
+    },
+    "MC587_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC587"
+            }
+        }
+    },
+    "MC588_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC588"
+            }
+        }
+    },
+    "MC589_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC589"
+            }
+        }
+    },
+    "MC590_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC590"
+            }
+        }
+    },
+    "MC591_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC591"
+            }
+        }
+    },
+    "MC592_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC592"
+            }
+        }
+    },
+    "MC593_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC593"
+            }
+        }
+    },
+    "MC594_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC594"
+            }
+        }
+    },
+    "MC595_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC595"
+            }
+        }
+    },
+    "MC596_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC596"
+            }
+        }
+    },
+    "MC597_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC597"
+            }
+        }
+    },
+    "MC598_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC598"
+            }
+        }
+    },
+    "MC599_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC599"
+            }
+        }
+    },
+    "MC600_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC600"
+            }
+        }
+    },
+    "MC601_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC601"
+            }
+        }
+    },
+    "MC602_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC602"
+            }
+        }
+    },
+    "MC603_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC603"
+            }
+        }
+    },
+    "MC604_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC604"
+            }
+        }
+    },
+    "MC605_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC605"
+            }
+        }
+    },
+    "MC606_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC606"
+            }
+        }
+    },
+    "MC607_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC607"
+            }
+        }
+    },
+    "MC608_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC608"
+            }
+        }
+    },
+    "MC609_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC609"
+            }
+        }
+    },
+    "MC610_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC610"
+            }
+        }
+    },
+    "MC611_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC611"
+            }
+        }
+    },
+    "MC612_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC612"
+            }
+        }
+    },
+    "MC613_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC613"
+            }
+        }
+    },
+    "MC614_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC614"
+            }
+        }
+    },
+    "MC615_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC615"
+            }
+        }
+    },
+    "MC616_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC616"
+            }
+        }
+    },
+    "MC617_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC617"
+            }
+        }
+    },
+    "MC618_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC618"
+            }
+        }
+    },
+    "MC619_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC619"
+            }
+        }
+    },
+    "MC620_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC620"
+            }
+        }
+    },
+    "MC621_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC621"
+            }
+        }
+    },
+    "MC622_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC622"
+            }
+        }
+    },
+    "MC623_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC623"
+            }
+        }
+    },
+    "MC624_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC624"
+            }
+        }
+    },
+    "MC625_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC625"
+            }
+        }
+    },
+    "MC626_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC626"
+            }
+        }
+    },
+    "MC627_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC627"
+            }
+        }
+    },
+    "MC628_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC628"
+            }
+        }
+    },
+    "MC629_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC629"
+            }
+        }
+    },
+    "MC630_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC630"
+            }
+        }
+    },
+    "MC631_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC631"
+            }
+        }
+    },
+    "MC632_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC632"
+            }
+        }
+    },
+    "MC633_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC633"
+            }
+        }
+    },
+    "MC634_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC634"
+            }
+        }
+    },
+    "MC635_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC635"
+            }
+        }
+    },
+    "MC636_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC636"
+            }
+        }
+    },
+    "MC637_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC637"
+            }
+        }
+    },
+    "MC638_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC638"
+            }
+        }
+    },
+    "MC639_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC639"
+            }
+        }
+    },
+    "MC640_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC640"
+            }
+        }
+    },
+    "MC641_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC641"
+            }
+        }
+    },
+    "MC642_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC642"
+            }
+        }
+    },
+    "MC643_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC643"
+            }
+        }
+    },
+    "MC644_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC644"
+            }
+        }
+    },
+    "MC645_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC645"
+            }
+        }
+    },
+    "MC646_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC646"
+            }
+        }
+    },
+    "MC647_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC647"
+            }
+        }
+    },
+    "MC648_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC648"
+            }
+        }
+    },
+    "MC649_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC649"
+            }
+        }
+    },
+    "MC650_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC650"
+            }
+        }
+    },
+    "MC651_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC651"
+            }
+        }
+    },
+    "MC652_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC652"
+            }
+        }
+    },
+    "MC653_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC653"
+            }
+        }
+    },
+    "MC654_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC654"
+            }
+        }
+    },
+    "MC655_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC655"
+            }
+        }
+    },
+    "MC656_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC656"
+            }
+        }
+    },
+    "MC657_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC657"
+            }
+        }
+    },
+    "MC658_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC658"
+            }
+        }
+    },
+    "MC659_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC659"
+            }
+        }
+    },
+    "MC660_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC660"
+            }
+        }
+    },
+    "MC661_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC661"
+            }
+        }
+    },
+    "MC662_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC662"
+            }
+        }
+    },
+    "MC663_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC663"
+            }
+        }
+    },
+    "MC664_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC664"
+            }
+        }
+    },
+    "MC665_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC665"
+            }
+        }
+    },
+    "MC666_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC666"
+            }
+        }
+    },
+    "MC667_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC667"
+            }
+        }
+    },
+    "MC668_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC668"
+            }
+        }
+    },
+    "MC669_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC669"
+            }
+        }
+    },
+    "MC670_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC670"
+            }
+        }
+    },
+    "MC671_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC671"
+            }
+        }
+    },
+    "MC672_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC672"
+            }
+        }
+    },
+    "MC673_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC673"
+            }
+        }
+    },
+    "MC674_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC674"
+            }
+        }
+    },
+    "MC675_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC675"
+            }
+        }
+    },
+    "MC676_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC676"
+            }
+        }
+    },
+    "MC677_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC677"
+            }
+        }
+    },
+    "MC678_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC678"
+            }
+        }
+    },
+    "MC679_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC679"
+            }
+        }
+    },
+    "MC680_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC680"
+            }
+        }
+    },
+    "MC681_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC681"
+            }
+        }
+    },
+    "MC682_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC682"
+            }
+        }
+    },
+    "MC683_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC683"
+            }
+        }
+    },
+    "MC684_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC684"
+            }
+        }
+    },
+    "MC685_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC685"
+            }
+        }
+    },
+    "MC686_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC686"
+            }
+        }
+    },
+    "MC687_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC687"
+            }
+        }
+    },
+    "MC688_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC688"
+            }
+        }
+    },
+    "MC689_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC689"
+            }
+        }
+    },
+    "MC690_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC690"
+            }
+        }
+    },
+    "MC691_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC691"
+            }
+        }
+    },
+    "MC692_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC692"
+            }
+        }
+    },
+    "MC693_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC693"
+            }
+        }
+    },
+    "MC694_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC694"
+            }
+        }
+    },
+    "MC695_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC695"
+            }
+        }
+    },
+    "MC696_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC696"
+            }
+        }
+    },
+    "MC697_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC697"
+            }
+        }
+    },
+    "MC698_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC698"
+            }
+        }
+    },
+    "MC699_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC699"
+            }
+        }
+    },
+    "MC700_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC700"
+            }
+        }
+    },
+    "MC701_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC701"
+            }
+        }
+    },
+    "MC702_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC702"
+            }
+        }
+    },
+    "MC703_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC703"
+            }
+        }
+    },
+    "MC704_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC704"
+            }
+        }
+    },
+    "MC705_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC705"
+            }
+        }
+    },
+    "MC706_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC706"
+            }
+        }
+    },
+    "MC707_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC707"
+            }
+        }
+    },
+    "MC708_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC708"
+            }
+        }
+    },
+    "MC709_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC709"
+            }
+        }
+    },
+    "MC710_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC710"
+            }
+        }
+    },
+    "MC711_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC711"
+            }
+        }
+    },
+    "MC712_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC712"
+            }
+        }
+    },
+    "MC713_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC713"
+            }
+        }
+    },
+    "MC714_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC714"
+            }
+        }
+    },
+    "MC715_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC715"
+            }
+        }
+    },
+    "MC716_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC716"
+            }
+        }
+    },
+    "MC717_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC717"
+            }
+        }
+    },
+    "MC718_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC718"
+            }
+        }
+    },
+    "MC719_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC719"
+            }
+        }
+    },
+    "MC720_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC720"
+            }
+        }
+    },
+    "MC721_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC721"
+            }
+        }
+    },
+    "MC722_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC722"
+            }
+        }
+    },
+    "MC723_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC723"
+            }
+        }
+    },
+    "MC724_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC724"
+            }
+        }
+    },
+    "MC725_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC725"
+            }
+        }
+    },
+    "MC726_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC726"
+            }
+        }
+    },
+    "MC727_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC727"
+            }
+        }
+    },
+    "MC728_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC728"
+            }
+        }
+    },
+    "MC729_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC729"
+            }
+        }
+    },
+    "MC730_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC730"
+            }
+        }
+    },
+    "MC731_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC731"
+            }
+        }
+    },
+    "MC732_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC732"
+            }
+        }
+    },
+    "MC733_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC733"
+            }
+        }
+    },
+    "MC734_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC734"
+            }
+        }
+    },
+    "MC735_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC735"
+            }
+        }
+    },
+    "MC736_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC736"
+            }
+        }
+    },
+    "MC737_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC737"
+            }
+        }
+    },
+    "MC738_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC738"
+            }
+        }
+    },
+    "MC739_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC739"
+            }
+        }
+    },
+    "MC740_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC740"
+            }
+        }
+    },
+    "MC741_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC741"
+            }
+        }
+    },
+    "MC742_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC742"
+            }
+        }
+    },
+    "MC743_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC743"
+            }
+        }
+    },
+    "MC744_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC744"
+            }
+        }
+    },
+    "MC745_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC745"
+            }
+        }
+    },
+    "MC746_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC746"
+            }
+        }
+    },
+    "MC747_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC747"
+            }
+        }
+    },
+    "MC748_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC748"
+            }
+        }
+    },
+    "MC749_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC749"
+            }
+        }
+    },
+    "MC750_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC750"
+            }
+        }
+    },
+    "MC751_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC751"
+            }
+        }
+    },
+    "MC752_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC752"
+            }
+        }
+    },
+    "MC753_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC753"
+            }
+        }
+    },
+    "MC754_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC754"
+            }
+        }
+    },
+    "MC755_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC755"
+            }
+        }
+    },
+    "MC756_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC756"
+            }
+        }
+    },
+    "MC757_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC757"
+            }
+        }
+    },
+    "MC758_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC758"
+            }
+        }
+    },
+    "MC759_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC759"
+            }
+        }
+    },
+    "MC760_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC760"
+            }
+        }
+    },
+    "MC761_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC761"
+            }
+        }
+    },
+    "MC762_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC762"
+            }
+        }
+    },
+    "MC763_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC763"
+            }
+        }
+    },
+    "MC764_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC764"
+            }
+        }
+    },
+    "MC765_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC765"
+            }
+        }
+    },
+    "MC766_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC766"
+            }
+        }
+    },
+    "MC767_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC767"
+            }
+        }
+    },
+    "MC768_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC768"
+            }
+        }
+    },
+    "MC769_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC769"
+            }
+        }
+    },
+    "MC770_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC770"
+            }
+        }
+    },
+    "MC771_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC771"
+            }
+        }
+    },
+    "MC772_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC772"
+            }
+        }
+    },
+    "MC773_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC773"
+            }
+        }
+    },
+    "MC774_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC774"
+            }
+        }
+    },
+    "MC775_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC775"
+            }
+        }
+    },
+    "MC776_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC776"
+            }
+        }
+    },
+    "MC777_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC777"
+            }
+        }
+    },
+    "MC778_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC778"
+            }
+        }
+    },
+    "MC779_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC779"
+            }
+        }
+    },
+    "MC780_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC780"
+            }
+        }
+    },
+    "MC781_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC781"
+            }
+        }
+    },
+    "MC782_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC782"
+            }
+        }
+    },
+    "MC783_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC783"
+            }
+        }
+    },
+    "MC784_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC784"
+            }
+        }
+    },
+    "MC785_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC785"
+            }
+        }
+    },
+    "MC786_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC786"
+            }
+        }
+    },
+    "MC787_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC787"
+            }
+        }
+    },
+    "MC788_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC788"
+            }
+        }
+    },
+    "MC789_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC789"
+            }
+        }
+    },
+    "MC790_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC790"
+            }
+        }
+    },
+    "MC791_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC791"
+            }
+        }
+    },
+    "MC792_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC792"
+            }
+        }
+    },
+    "MC793_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC793"
+            }
+        }
+    },
+    "MC794_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC794"
+            }
+        }
+    },
+    "MC795_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC795"
+            }
+        }
+    },
+    "MC796_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC796"
+            }
+        }
+    },
+    "MC797_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC797"
+            }
+        }
+    },
+    "MC798_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC798"
+            }
+        }
+    },
+    "MC799_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC799"
+            }
+        }
+    },
+    "MC800_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC800"
+            }
+        }
+    },
+    "MC801_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC801"
+            }
+        }
+    },
+    "MC802_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC802"
+            }
+        }
+    },
+    "MC803_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC803"
+            }
+        }
+    },
+    "MC804_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC804"
+            }
+        }
+    },
+    "MC805_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC805"
+            }
+        }
+    },
+    "MC806_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC806"
+            }
+        }
+    },
+    "MC807_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC807"
+            }
+        }
+    },
+    "MC808_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC808"
+            }
+        }
+    },
+    "MC809_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC809"
+            }
+        }
+    },
+    "MC810_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC810"
+            }
+        }
+    },
+    "MC811_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC811"
+            }
+        }
+    },
+    "MC812_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC812"
+            }
+        }
+    },
+    "MC813_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC813"
+            }
+        }
+    },
+    "MC814_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC814"
+            }
+        }
+    },
+    "MC815_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC815"
+            }
+        }
+    },
+    "MC816_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC816"
+            }
+        }
+    },
+    "MC817_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC817"
+            }
+        }
+    },
+    "MC818_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC818"
+            }
+        }
+    },
+    "MC819_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC819"
+            }
+        }
+    },
+    "MC820_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC820"
+            }
+        }
+    },
+    "MC821_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC821"
+            }
+        }
+    },
+    "MC822_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC822"
+            }
+        }
+    },
+    "MC823_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC823"
+            }
+        }
+    },
+    "MC824_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC824"
+            }
+        }
+    },
+    "MC825_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC825"
+            }
+        }
+    },
+    "MC826_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC826"
+            }
+        }
+    },
+    "MC827_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC827"
+            }
+        }
+    },
+    "MC828_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC828"
+            }
+        }
+    },
+    "MC829_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC829"
+            }
+        }
+    },
+    "MC830_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC830"
+            }
+        }
+    },
+    "MC831_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC831"
+            }
+        }
+    },
+    "MC832_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC832"
+            }
+        }
+    },
+    "MC833_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC833"
+            }
+        }
+    },
+    "MC834_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC834"
+            }
+        }
+    },
+    "MC835_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC835"
+            }
+        }
+    },
+    "MC836_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC836"
+            }
+        }
+    },
+    "MC837_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC837"
+            }
+        }
+    },
+    "MC838_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC838"
+            }
+        }
+    },
+    "MC839_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC839"
+            }
+        }
+    },
+    "MC840_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC840"
+            }
+        }
+    },
+    "MC841_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC841"
+            }
+        }
+    },
+    "MC842_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC842"
+            }
+        }
+    },
+    "MC843_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC843"
+            }
+        }
+    },
+    "MC844_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC844"
+            }
+        }
+    },
+    "MC845_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC845"
+            }
+        }
+    },
+    "MC846_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC846"
+            }
+        }
+    },
+    "MC847_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC847"
+            }
+        }
+    },
+    "MC848_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC848"
+            }
+        }
+    },
+    "MC849_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC849"
+            }
+        }
+    },
+    "MC850_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC850"
+            }
+        }
+    },
+    "MC851_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC851"
+            }
+        }
+    },
+    "MC852_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC852"
+            }
+        }
+    },
+    "MC853_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC853"
+            }
+        }
+    },
+    "MC854_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC854"
+            }
+        }
+    },
+    "MC855_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC855"
+            }
+        }
+    },
+    "MC856_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC856"
+            }
+        }
+    },
+    "MC857_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC857"
+            }
+        }
+    },
+    "MC858_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC858"
+            }
+        }
+    },
+    "MC859_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC859"
+            }
+        }
+    },
+    "MC860_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC860"
+            }
+        }
+    },
+    "MC861_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC861"
+            }
+        }
+    },
+    "MC862_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC862"
+            }
+        }
+    },
+    "MC863_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC863"
+            }
+        }
+    },
+    "MC864_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC864"
+            }
+        }
+    },
+    "MC865_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC865"
+            }
+        }
+    },
+    "MC866_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC866"
+            }
+        }
+    },
+    "MC867_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC867"
+            }
+        }
+    },
+    "MC868_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC868"
+            }
+        }
+    },
+    "MC869_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC869"
+            }
+        }
+    },
+    "MC870_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC870"
+            }
+        }
+    },
+    "MC871_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC871"
+            }
+        }
+    },
+    "MC872_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC872"
+            }
+        }
+    },
+    "MC873_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC873"
+            }
+        }
+    },
+    "MC874_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC874"
+            }
+        }
+    },
+    "MC875_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC875"
+            }
+        }
+    },
+    "MC876_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC876"
+            }
+        }
+    },
+    "MC877_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC877"
+            }
+        }
+    },
+    "MC878_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC878"
+            }
+        }
+    },
+    "MC879_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC879"
+            }
+        }
+    },
+    "MC880_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC880"
+            }
+        }
+    },
+    "MC881_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC881"
+            }
+        }
+    },
+    "MC882_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC882"
+            }
+        }
+    },
+    "MC883_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC883"
+            }
+        }
+    },
+    "MC884_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC884"
+            }
+        }
+    },
+    "MC885_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC885"
+            }
+        }
+    },
+    "MC886_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC886"
+            }
+        }
+    },
+    "MC887_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC887"
+            }
+        }
+    },
+    "MC888_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC888"
+            }
+        }
+    },
+    "MC889_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC889"
+            }
+        }
+    },
+    "MC890_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC890"
+            }
+        }
+    },
+    "MC891_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC891"
+            }
+        }
+    },
+    "MC892_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC892"
+            }
+        }
+    },
+    "MC893_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC893"
+            }
+        }
+    },
+    "MC894_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC894"
+            }
+        }
+    },
+    "MC895_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC895"
+            }
+        }
+    },
+    "MC896_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC896"
+            }
+        }
+    },
+    "MC897_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC897"
+            }
+        }
+    },
+    "MC898_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC898"
+            }
+        }
+    },
+    "MC899_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC899"
+            }
+        }
+    },
+    "MC900_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC900"
+            }
+        }
+    },
+    "MC901_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC901"
+            }
+        }
+    },
+    "MC902_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC902"
+            }
+        }
+    },
+    "MC903_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC903"
+            }
+        }
+    },
+    "MC904_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC904"
+            }
+        }
+    },
+    "MC905_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC905"
+            }
+        }
+    },
+    "MC906_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC906"
+            }
+        }
+    },
+    "MC907_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC907"
+            }
+        }
+    },
+    "MC908_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC908"
+            }
+        }
+    },
+    "MC909_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC909"
+            }
+        }
+    },
+    "MC910_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC910"
+            }
+        }
+    },
+    "MC911_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC911"
+            }
+        }
+    },
+    "MC912_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC912"
+            }
+        }
+    },
+    "MC913_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC913"
+            }
+        }
+    },
+    "MC914_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC914"
+            }
+        }
+    },
+    "MC915_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC915"
+            }
+        }
+    },
+    "MC916_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC916"
+            }
+        }
+    },
+    "MC917_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC917"
+            }
+        }
+    },
+    "MC918_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC918"
+            }
+        }
+    },
+    "MC919_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC919"
+            }
+        }
+    },
+    "MC920_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC920"
+            }
+        }
+    },
+    "MC921_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC921"
+            }
+        }
+    },
+    "MC922_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC922"
+            }
+        }
+    },
+    "MC923_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC923"
+            }
+        }
+    },
+    "MC924_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC924"
+            }
+        }
+    },
+    "MC925_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC925"
+            }
+        }
+    },
+    "MC926_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC926"
+            }
+        }
+    },
+    "MC927_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC927"
+            }
+        }
+    },
+    "MC928_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC928"
+            }
+        }
+    },
+    "MC929_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC929"
+            }
+        }
+    },
+    "MC930_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC930"
+            }
+        }
+    },
+    "MC931_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC931"
+            }
+        }
+    },
+    "MC932_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC932"
+            }
+        }
+    },
+    "MC933_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC933"
+            }
+        }
+    },
+    "MC934_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC934"
+            }
+        }
+    },
+    "MC935_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC935"
+            }
+        }
+    },
+    "MC936_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC936"
+            }
+        }
+    },
+    "MC937_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC937"
+            }
+        }
+    },
+    "MC938_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC938"
+            }
+        }
+    },
+    "MC939_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC939"
+            }
+        }
+    },
+    "MC940_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC940"
+            }
+        }
+    },
+    "MC941_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC941"
+            }
+        }
+    },
+    "MC942_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC942"
+            }
+        }
+    },
+    "MC943_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC943"
+            }
+        }
+    },
+    "MC944_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC944"
+            }
+        }
+    },
+    "MC945_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC945"
+            }
+        }
+    },
+    "MC946_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC946"
+            }
+        }
+    },
+    "MC947_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC947"
+            }
+        }
+    },
+    "MC948_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC948"
+            }
+        }
+    },
+    "MC949_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC949"
+            }
+        }
+    },
+    "MC950_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC950"
+            }
+        }
+    },
+    "MC951_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC951"
+            }
+        }
+    },
+    "MC952_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC952"
+            }
+        }
+    },
+    "MC953_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC953"
+            }
+        }
+    },
+    "MC954_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC954"
+            }
+        }
+    },
+    "MC955_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC955"
+            }
+        }
+    },
+    "MC956_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC956"
+            }
+        }
+    },
+    "MC957_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC957"
+            }
+        }
+    },
+    "MC958_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC958"
+            }
+        }
+    },
+    "MC959_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC959"
+            }
+        }
+    },
+    "MC960_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC960"
+            }
+        }
+    },
+    "MC961_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC961"
+            }
+        }
+    },
+    "MC962_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC962"
+            }
+        }
+    },
+    "MC963_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC963"
+            }
+        }
+    },
+    "MC964_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC964"
+            }
+        }
+    },
+    "MC965_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC965"
+            }
+        }
+    },
+    "MC966_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC966"
+            }
+        }
+    },
+    "MC967_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC967"
+            }
+        }
+    },
+    "MC968_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC968"
+            }
+        }
+    },
+    "MC969_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC969"
+            }
+        }
+    },
+    "MC970_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC970"
+            }
+        }
+    },
+    "MC971_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC971"
+            }
+        }
+    },
+    "MC972_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC972"
+            }
+        }
+    },
+    "MC973_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC973"
+            }
+        }
+    },
+    "MC974_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC974"
+            }
+        }
+    },
+    "MC975_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC975"
+            }
+        }
+    },
+    "MC976_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC976"
+            }
+        }
+    },
+    "MC977_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC977"
+            }
+        }
+    },
+    "MC978_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC978"
+            }
+        }
+    },
+    "MC979_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC979"
+            }
+        }
+    },
+    "MC980_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC980"
+            }
+        }
+    },
+    "MC981_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC981"
+            }
+        }
+    },
+    "MC982_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC982"
+            }
+        }
+    },
+    "MC983_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC983"
+            }
+        }
+    },
+    "MC984_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC984"
+            }
+        }
+    },
+    "MC985_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC985"
+            }
+        }
+    },
+    "MC986_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC986"
+            }
+        }
+    },
+    "MC987_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC987"
+            }
+        }
+    },
+    "MC988_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC988"
+            }
+        }
+    },
+    "MC989_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC989"
+            }
+        }
+    },
+    "MC990_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC990"
+            }
+        }
+    },
+    "MC991_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC991"
+            }
+        }
+    },
+    "MC992_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC992"
+            }
+        }
+    },
+    "MC993_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC993"
+            }
+        }
+    },
+    "MC994_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC994"
+            }
+        }
+    },
+    "MC995_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC995"
+            }
+        }
+    },
+    "MC996_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC996"
+            }
+        }
+    },
+    "MC997_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC997"
+            }
+        }
+    },
+    "MC998_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC998"
+            }
+        }
+    },
+    "MC999_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC999"
+            }
+        }
+    },
+    "MC1000_capacity": {
+        "set_conversion_technologies": {
+            "capacity_limit": {
+                "file": "capacity_limit_MC1000"
+            }
+        }
+    }
+}
