@@ -16,7 +16,7 @@ dependencies:
   - ipykernel
   - pip:
       - linopy>=0.3
-      - calliope>=0.7
+      - calliope==0.7.0.dev7
       - pypsa>=0.25
       - gurobipy
       - ordered-set
