@@ -7,7 +7,16 @@ from pathlib import Path
 
 # Set style
 plt.style.use('seaborn-v0_8-whitegrid')
-
+plt.rcParams['font.family'] = 'arial'
+plt.rcParams['font.size'] = 12
+plt.rcParams['axes.labelsize'] = 12
+plt.rcParams['axes.titlesize'] = 12
+plt.rcParams['xtick.labelsize'] = 12
+plt.rcParams['ytick.labelsize'] = 12
+plt.rcParams['legend.fontsize'] = 12
+plt.rcParams['figure.titlesize'] = 12
+plt.rcParams['axes.grid'] = True
+plt.rcParams['grid.linestyle'] = '-'
 
 # ====================================
 # DATA EXTRACTION AND REGION MAPPING
@@ -481,7 +490,7 @@ try:
 
     # Define regions and years
     regions_list = ['CHN', 'EUR', 'USA', 'ROW']
-    years = [2022, 2025, 2030, 2035]
+    years = [2022,  2030, 2035]
 
     # Extract data for each region
     data = {}
@@ -510,7 +519,7 @@ nze_colors = {'capacity': '#007894', 'production': '#3395AB', 'demand': '#365213
 
 # Create figure
 fig = plt.figure(figsize=(12, 12))
-gs = fig.add_gridspec(4, 3, hspace=0.2, wspace=0.25, left=0.15, right=0.99, top=0.98, bottom=0.06)
+gs = fig.add_gridspec(4, 3, hspace=0.2, wspace=0.25, left=0.15, right=0.99, top=0.98, bottom=0.05)
 
 # X positions for discrete bars
 x_pos = np.arange(len(years))
@@ -560,7 +569,7 @@ for row, region in enumerate(regions_list):
 
     label_index = row * 3
     ax1.text(0.04, 0.96, subplot_labels[label_index], transform=ax1.transAxes,
-             fontsize=13, fontweight='bold', va='top', ha='left')
+             fontsize=12, fontweight='bold', va='top', ha='left')
 
     ax1.bar(x_pos, region_data['BAU']['production'], width=bar_width,
             color=bau_colors['production'], alpha=0.8)
@@ -572,19 +581,19 @@ for row, region in enumerate(regions_list):
              markeredgewidth=3)
 
     ax1.set_ylim(0, maxY)
-    ax1.set_ylabel('GW', fontsize=10)
+    ax1.set_ylabel('GW', fontsize=12)
     ax1.set_xticks(x_pos)
     ax1.set_xticklabels(years)
     ax1.grid(True, alpha=0.2)
     if row == 0:
-        ax1.set_title('Base scenario', fontsize=13)
+        ax1.set_title('Base scenario', fontsize=12)
 
     # NZE subplot
     ax2 = fig.add_subplot(gs[row, 1])
 
     label_index = row * 3 + 1
     ax2.text(0.04, 0.96, subplot_labels[label_index], transform=ax2.transAxes,
-             fontsize=13, fontweight='bold', va='top', ha='left')
+             fontsize=12, fontweight='bold', va='top', ha='left')
 
     ax2.bar(x_pos, region_data['NZE']['production'], width=bar_width,
             color=nze_colors['production'], alpha=0.8)
@@ -596,19 +605,19 @@ for row, region in enumerate(regions_list):
              markeredgewidth=3)
 
     ax2.set_ylim(0, maxY)
-    ax2.set_ylabel('GW', fontsize=10)
+    ax2.set_ylabel('GW', fontsize=12)
     ax2.set_xticks(x_pos)
     ax2.set_xticklabels(years)
     ax2.grid(True, alpha=0.2)
     if row == 0:
-        ax2.set_title('Demand-met scenario', fontsize=13)
+        ax2.set_title('Demand-met scenario', fontsize=12)
 
     # Cost subplot
     ax3 = fig.add_subplot(gs[row, 2])
 
     label_index = row * 3 + 2
     ax3.text(0.08, 0.96, subplot_labels[label_index], transform=ax3.transAxes,
-             fontsize=13, fontweight='bold', va='top', ha='right')
+             fontsize=12, fontweight='bold', va='top', ha='right')
 
     cost_x_pos = [0, 1]
     cost_width = 0.4
@@ -639,13 +648,13 @@ for row, region in enumerate(regions_list):
         bottom_nze += cost
 
     ax3.set_ylim(0, maxCost)
-    ax3.set_ylabel(cost_label, fontsize=10)
+    ax3.set_ylabel(cost_label, fontsize=12)
     ax3.set_xticks(cost_x_pos)
     ax3.set_xticklabels(['BAU', 'NZE'])
     ax3.set_xlim(-0.5, 1.5)
     ax3.grid(True, alpha=0.2)
     if row == 0:
-        ax3.set_title('Cumulative Costs', fontsize=13)
+        ax3.set_title('Cumulative Costs', fontsize=12)
 
     # Region label
     if region == 'CHN':
@@ -660,11 +669,9 @@ for row, region in enumerate(regions_list):
         region_label = region
     fig.text(0.05, gs[row, 0].get_position(fig).y0 +
              (gs[row, 0].get_position(fig).y1 - gs[row, 0].get_position(fig).y0) / 2,
-             region_label, fontsize=13, va='center', ha='center')
+             region_label, fontsize=12, va='center', ha='center')
 
-# Main title
-# fig.suptitle('Heat Pump Capacity, Production, Demand and Costs by Region',
-#              fontsize=16, y=0.98)
+
 
 # Legend - UPDATED to reflect production instead of operation
 legend_elements = [
@@ -681,7 +688,7 @@ legend_elements = [
 ]
 
 fig.legend(handles=legend_elements, loc='lower center',
-          ncol=6, frameon=False, fontsize=10, bbox_to_anchor=(0.5, 0.01))
+          ncol=6, frameon=False, fontsize=12, bbox_to_anchor=(0.5, 0.001))
 
 # plt.figtext(0.5, 0.005, 'Colors: BAU (orange tones), NZE (blue tones), with different opacities for cost types.',
 #             ha='center', fontsize=9, style='italic')
@@ -690,8 +697,8 @@ fig.legend(handles=legend_elements, loc='lower center',
 output_dir = Path('visualization')
 output_dir.mkdir(exist_ok=True)
 
-plt.savefig(output_dir / 'Fig1_dcp_costs_base_demandmet.png', dpi=330, bbox_inches='tight')
-plt.savefig(output_dir / 'Fig1_dcp_costs_base_demandmet.pdf', bbox_inches='tight')
+plt.savefig(output_dir / 'Fig1_dcp_costs_base_demandmet3.png', dpi=330, bbox_inches='tight')
+plt.savefig(output_dir / 'Fig1_dcp_costs_base_demandmet3.pdf', bbox_inches='tight')
 plt.show()
 
 print(f"\nPlots saved to {output_dir}/")
