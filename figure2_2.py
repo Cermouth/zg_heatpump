@@ -5,31 +5,31 @@ import numpy as np
 
 # ETH Color Scheme
 ETH_COLORS = {
-    'ETH Blue': {'100%': '#215CAF', '60%': '#7A9DCF', '40%': '#A6BEDF', '20%': '#D3DEEF'},
-    'ETH Petrol': {'100%': '#007894', '60%': '#66AFC0', '40%': '#99CAD5', '20%': '#CCE4EA'},
-    'ETH Green': {'100%': '#627313', '60%': '#A1AB71', '40%': '#C0C7A1', '20%': '#E0E3D0'},
-    'ETH Bronze': {'100%': '#8E6713', '60%': '#BBA471', '40%': '#D2C2A1', '20%': '#E8E1D0'},
-    'ETH Red': {'100%': '#B7352D', '60%': '#D48681', '40%': '#E2AEAB', '20%': '#F1D7D5'},
-    'ETH Purple': {'100%': '#A7117A', '60%': '#CA6CAE', '40%': '#DC9EC9', '20%': '#EFD0E3'},
-    'ETH Grey': {'100%': '#6F6F6F', '60%': '#A9A9A9', '40%': '#C5C5C5', '20%': '#E2E2E2'}
+    'ETH Blue': {'120%': '#08407E', '100%': '#215CAF', '80%': '#4D7DBF', '60%': '#7A9DCF', '40%': '#A6BEDF', '20%': '#D3DEEF', '10%': '#E9EFF7'},
+    'ETH Petrol': {'120%': '#00596D', '100%': '#007894', '80%': '#3395AB', '60%': '#66AFC0', '40%': '#99CAD5', '20%': '#CCE4EA', '10%': '#E7F4F7'},
+    'ETH Green': {'120%': '#365213', '100%': '#627313', '80%': '#818F42', '60%': '#A1AB71', '40%': '#C0C7A1', '20%': '#E0E3D0', '10%': '#EEF1E7'},
+    'ETH Bronze': {'120%': '#704F12', '100%': '#8E6713', '80%': '#A58542', '60%': '#BBA471', '40%': '#D2C2A1', '20%': '#E8E1D0', '10%': '#F4F0E7'},
+    'ETH Red': {'120%': '#96272D', '100%': '#B7352D', '80%': '#C55D57', '60%': '#D48681', '40%': '#E2AEAB', '20%': '#F1D7D5', '10%': '#F8EBEA'},
+    'ETH Purple': {'120%': '#8C0A59', '100%': '#A7117A', '80%': '#B73B92', '60%': '#CA6CAE', '40%': '#DC9EC9', '20%': '#EFD0E3', '10%': '#F8E8F3'},
+    'ETH Grey': {'120%': '#575757', '100%': '#6F6F6F', '80%': '#8C8C8C', '60%': '#A9A9A9', '40%': '#C5C5C5', '20%': '#E2E2E2', '10%': '#F1F1F1'}
 }
 
 # Region to color mapping
 REGION_COLORS = {
-    'CHN': 'ETH Red',  # China - Red
-    'AUS': 'ETH Bronze',  # Australia - Bronze
-    'ROW': 'ETH Purple',  # Rest of World - Purple
-    'JPN': 'ETH Bronze',  # Japan - Bronze
-    'ROA': 'ETH Green',  # Rest of Asia - Green
-    'EUR': 'ETH Blue',  # Europe - Blue
-    'USA': 'ETH Petrol',  # USA - Petrol
-    'BRA': 'ETH Green',  # Brazil - Green
-    'KOR': 'ETH Petrol',  # Korea - Petrol
-    'DEU': 'ETH Blue',  # Germany - Blue
-    'ITA': 'ETH Blue',  # Italy - Blue
-    'AUT': 'ETH Blue',  # Austria - Blue
-    'CZE': 'ETH Blue',  # Czechia - Blue
-    'ROE': 'ETH Blue',  # Rest of Europe - Blue
+    'CHN': ETH_COLORS['ETH Purple']['120%'],  # China - Red
+    'AUS': ETH_COLORS['ETH Bronze']['100%'],  # Australia - Bronze
+    'ROW': ETH_COLORS['ETH Grey']['100%'],  # Rest of World - Purple
+    'JPN': ETH_COLORS['ETH Purple']['80%'],  # Japan - Bronze
+    'ROA': ETH_COLORS['ETH Purple']['20%'],  # Rest of Asia - Green
+    'EUR': ETH_COLORS['ETH Blue']['100%'],  # Europe - Blue
+    'USA': ETH_COLORS['ETH Petrol']['100%'],  # USA - Petrol
+    'BRA': ETH_COLORS['ETH Red']['60%'],  # Brazil - Green
+    'KOR': ETH_COLORS['ETH Purple']['40%'],  # Korea - Petrol
+    'DEU': ETH_COLORS['ETH Blue']['120%'],  # Germany - Blue
+    'ITA': ETH_COLORS['ETH Blue']['60%'],  # Italy - Blue
+    'AUT': ETH_COLORS['ETH Blue']['80%'],  # Austria - Blue
+    'CZE': ETH_COLORS['ETH Blue']['20%'],  # Czechia - Blue
+    'ROE': ETH_COLORS['ETH Blue']['40%'],  # Rest of Europe - Blue
 }
 
 
@@ -38,8 +38,8 @@ def get_node_color(node_name, intensity='100%'):
     # Extract country code from node name
     country = node_name.split('_')[0] if '_' in node_name else node_name
 
-    region_color = REGION_COLORS.get(country, 'ETH Grey')
-    return ETH_COLORS[region_color][intensity]
+    region_color = REGION_COLORS.get(country)
+    return region_color
 
 
 def get_link_color_with_alpha(node_name, alpha=0.3):
@@ -204,13 +204,22 @@ def prepare_flows_for_sankey(prod_df, trans_df, technology, scenario_col):
                     sources.append(left_nodes[exporter])
                     targets.append(right_nodes[importer])
                     values.append(flow_value)
+                    if technology == 'Compressor_transport':
+                        continue
                 except (ValueError, AttributeError, KeyError):
                     continue
 
-    # Set x positions (left=0.05, right=0.95 for more spacing)
+    # 优化节点位置计算 - 为底部留出更多空间
     n_countries = len(all_countries)
-    x_positions = [0.05] * n_countries + [0.95] * n_countries
-    y_positions = [i / max(n_countries - 1, 1) for i in range(n_countries)] * 2
+    if n_countries > 1:
+        # 使用0.1到0.9的范围，为顶部和底部留出空间
+        y_positions = [0.01 + (i * 0.9 / (n_countries - 1)) for i in range(n_countries)]
+    else:
+        y_positions = [0.5]  # 如果只有一个国家，放在中间
+
+    # 左右节点使用相同的位置
+    y_positions = y_positions * 2
+    x_positions = [0.15] * n_countries + [0.85] * n_countries
 
     return {
         'sources': sources,
@@ -220,6 +229,49 @@ def prepare_flows_for_sankey(prod_df, trans_df, technology, scenario_col):
         'x_positions': x_positions,
         'y_positions': y_positions,
         'n_countries': n_countries
+    }
+
+
+def calculate_optimal_layout(flow_data):
+    """
+    根据节点和流线数量计算最优的布局参数
+    """
+    n_nodes = len(flow_data['labels'])
+    n_links = len(flow_data['sources'])
+
+    # 基础高度
+    base_height = 800
+    # 每增加一个节点增加的高度
+    extra_height_per_node = 40
+    # 每增加一条流线增加的高度
+    extra_height_per_link = 5
+
+    optimal_height = base_height + (n_nodes * extra_height_per_node) + (n_links * extra_height_per_link)
+
+    # 动态调整节点参数
+    if n_nodes > 15:
+        node_pad = 10
+        node_thickness = 15
+        font_size = 10
+    elif n_nodes > 10:
+        node_pad = 20
+        node_thickness = 20
+        font_size = 11
+    else:
+        node_pad = 30
+        node_thickness = 25
+        font_size = 12
+
+    # 动态调整边距
+    bottom_margin = max(100, 60 + (n_nodes * 3))
+
+    return {
+        'height': optimal_height,
+        'node_pad': node_pad,
+        'node_thickness': node_thickness,
+        'font_size': font_size,
+        'bottom_margin': bottom_margin,
+        'width': max(900, 800 + (n_nodes * 10))
     }
 
 
@@ -245,7 +297,9 @@ def create_sankey_figure(flow_data, title, unit='GW'):
         print(f"No flow data available for {title}")
         return None
 
-    # Get country names (first half are left nodes, second half are right nodes)
+    # 计算最优布局参数
+    layout_params = calculate_optimal_layout(flow_data)
+
     n_countries = flow_data['n_countries']
 
     # Assign colors to nodes based on region (both left and right use same color for same country)
@@ -262,13 +316,13 @@ def create_sankey_figure(flow_data, title, unit='GW'):
     # Calculate total flow
     total_flow = sum(flow_data['values'])
 
-    # Create Sankey diagram
+    # Create Sankey diagram with optimized parameters
     fig = go.Figure(data=[go.Sankey(
-        arrangement='snap',
+        arrangement='freeform',  # 使用freeform获得更好的布局控制
         node=dict(
-            pad=55,
-            thickness=30,
-            line=dict(color="white", width=2),
+            pad=layout_params['node_pad'],  # 动态调整
+            thickness=layout_params['node_thickness'],  # 动态调整
+            line=dict(color="white", width=1.5),
             label=flow_data['labels'],
             color=node_colors,
             x=flow_data['x_positions'],
@@ -290,14 +344,19 @@ def create_sankey_figure(flow_data, title, unit='GW'):
             text=f"{title}<br><sub>Total Flow: {total_flow:.2f} {unit}</sub>",
             x=0.5,
             xanchor='center',
-            font=dict(size=18, family='Arial', weight='bold', color='#333')
+            font=dict(size=16, family='Arial', weight='bold', color='#333')
         ),
-        font=dict(size=12, family='Arial'),
+        font=dict(size=layout_params['font_size'], family='Arial'),
         plot_bgcolor='white',
         paper_bgcolor='white',
-        height=800,
-        width=800,
-        margin=dict(t=50, b=50, l=50, r=50)
+        height=layout_params['height'],  # 动态高度
+        width=layout_params['width'],  # 动态宽度
+        margin=dict(
+            t=80,  # 顶部边距
+            b=layout_params['bottom_margin'],  # 动态底部边距
+            l=80,  # 左侧边距
+            r=80  # 右侧边距
+        )
     )
 
     return fig
@@ -345,7 +404,8 @@ def create_sankey_grid(prod_df, trans_df, technology, scenarios, output_dir):
             print(f"Saved: {output_html}")
 
 
-def create_combined_scenario_grid(prod_df, trans_df, technology, scenarios, output_dir):
+def create_combined_scenario_grid(prod_df, trans_df, technology, scenarios, output_dir,
+                                  n_cols=4, x_spacing=0.03, y_spacing=0.12):
     """
     Create a single figure with all scenarios in a grid layout.
 
@@ -361,14 +421,24 @@ def create_combined_scenario_grid(prod_df, trans_df, technology, scenarios, outp
         Dictionary mapping scenario column names to display names
     output_dir : Path
         Output directory for saving plots
+    n_cols : int
+        Number of columns in the grid (default: 4 for single row)
+    x_spacing : float
+        Horizontal spacing between subplots
+    y_spacing : float
+        Vertical spacing between subplots
     """
     n_scenarios = len(scenarios)
-    n_cols = 2
     n_rows = (n_scenarios + n_cols - 1) // n_cols
+
+    # 动态计算整体高度 - 为底部留出更多空间
+    base_height_per_plot = 900
+    extra_height_for_bottom = 300
+    total_height = (base_height_per_plot * n_rows) + extra_height_for_bottom
+    total_width = 2200  # 增加宽度以容纳4个图表
 
     # Create figure
     fig = go.Figure()
-
     annotations = []
 
     for i, (scenario_col, scenario_name) in enumerate(scenarios.items()):
@@ -377,62 +447,48 @@ def create_combined_scenario_grid(prod_df, trans_df, technology, scenarios, outp
         if not flow_data['sources']:
             continue
 
-        # Calculate position in grid with more spacing
+        # Calculate position in grid
         row = i // n_cols
         col = i % n_cols
 
-        # Increase spacing between subplots
-        x_spacing = 0.1
-        y_spacing = 0.15
-        subplot_width = (1.0 - (n_cols + 1) * x_spacing)  / n_cols
+        # Calculate subplot dimensions with more vertical space
+        subplot_width = (1.0 - (n_cols + 1) * x_spacing) / n_cols
         subplot_height = (1.0 - (n_rows + 1) * y_spacing) / n_rows
 
-        # Shift left by reducing x values, shift up by increasing y values
-        x_shift = -0.1  # Negative moves left
-        y_shift = 0.1  # Positive moves up
-
+        # Calculate domain positions - 为底部留出更多空间
         x_domain = [
-            x_spacing + col * (subplot_width + x_spacing) + x_shift,
-            x_spacing + col * (subplot_width + x_spacing) + subplot_width + x_shift
+            x_spacing + col * (subplot_width + x_spacing),
+            x_spacing + col * (subplot_width + x_spacing) + subplot_width
         ]
+
+        # 调整y域位置，为底部留出更多空间
         y_domain = [
-            1.0 - y_spacing - (row + 1) * (subplot_height + y_spacing) + y_shift,
-            1.0 - y_spacing - row * (subplot_height + y_spacing) - y_spacing + y_shift
+            1.0 - y_spacing - (row + 1) * (subplot_height + y_spacing) + 0.05,  # 上移
+            1.0 - y_spacing - row * (subplot_height + y_spacing) - 0.05  # 下移，为底部留空间
         ]
 
-        # Adjust x positions to be within domain
-        x_positions_adjusted = []
-        for x in flow_data['x_positions']:
-            x_new = x_domain[0] + x * (x_domain[1] - x_domain[0])
-            x_positions_adjusted.append(x_new)
+        # Get colors for nodes and links
+        node_colors = []
+        for label in flow_data['labels']:
+            node_colors.append(get_node_color(label, '100%'))
 
-        # Adjust y positions to be within domain
-        y_positions_adjusted = []
-        for y in flow_data['y_positions']:
-            y_new = y_domain[0] + y * (y_domain[1] - y_domain[0])
-            y_positions_adjusted.append(y_new)
-
-        # Assign colors to nodes
-        node_colors = [get_node_color(label, '100%') for label in flow_data['labels']]
-
-        # Assign colors to links
         link_colors = []
         for src_idx in flow_data['sources']:
             src_label = flow_data['labels'][src_idx]
             link_colors.append(get_link_color_with_alpha(src_label, alpha=0.4))
 
-        # Add Sankey trace
+        # Add Sankey trace with optimized parameters for grid
         fig.add_trace(go.Sankey(
-            domain=dict(x=x_domain, y=y_domain),
             arrangement='snap',
+            domain=dict(x=x_domain, y=y_domain),
             node=dict(
-                pad=10,
-                thickness=35,
-                line=dict(color="white", width=2),
+                pad=5,  # 减小间距以适应网格
+                thickness=10,  # 减小厚度
+                line=dict(color="white", width=1),
                 label=flow_data['labels'],
                 color=node_colors,
-                x=x_positions_adjusted,
-                y=y_positions_adjusted
+                x=flow_data['x_positions'],
+                y=flow_data['y_positions']
             ),
             link=dict(
                 source=flow_data['sources'],
@@ -442,16 +498,16 @@ def create_combined_scenario_grid(prod_df, trans_df, technology, scenarios, outp
             )
         ))
 
-        # Add scenario title (centered above each subplot)
+        # Add scenario title - 调整位置避免重叠
         total_flow = sum(flow_data['values'])
         annotations.append(dict(
             text=f"<b>{scenario_name}</b><br>Total: {total_flow:.1f} GW",
             x=(x_domain[0] + x_domain[1]) / 2,
-            y=y_domain[1] + 0.05,  # Change from 0.03 to 0.05 (move title up more)
+            y=y_domain[1] + 0.2,  # 稍微上移标题
             xref="paper",
             yref="paper",
             showarrow=False,
-            font=dict(size=16, family='Arial', color='#333'),
+            font=dict(size=14, family='Arial', color='#333'),
             align='center',
             xanchor='center'
         ))
@@ -465,23 +521,22 @@ def create_combined_scenario_grid(prod_df, trans_df, technology, scenarios, outp
             xanchor='center',
             font=dict(size=20, family='Arial', weight='bold', color='#333')
         ),
-        width=1000,
-        height=1000 * n_rows,
+        width=total_width,
+        height=total_height,
         showlegend=False,
         paper_bgcolor='white',
         plot_bgcolor='white',
         annotations=annotations,
-        margin=dict(t=10, b=10, l=10, r=10)
+        margin=dict(t=50, b=350, l=50, r=50)  # 显著增加底部边距
     )
 
     # Save combined grid
     output_file = output_dir / f"sankey_{technology}_all_scenarios_2035.png"
-    fig.write_image(str(output_file), scale=2)
+    fig.write_image(str(output_file), scale=3)  # 提高分辨率
     print(f"Saved combined grid: {output_file}")
 
     output_html = output_dir / f"sankey_{technology}_all_scenarios_2035.html"
     fig.write_html(str(output_html))
-    print(f"Saved combined grid: {output_html}")
     print(f"Saved combined grid: {output_html}")
 
 
@@ -515,11 +570,18 @@ def main():
     for technology in technologies:
         print(f"\nCreating Sankey plots for {technology}...")
 
+        # 先检查数据量
+        for scenario_col, scenario_name in scenarios.items():
+            flow_data = prepare_flows_for_sankey(prod_df, trans_df, technology, scenario_col)
+            n_nodes = len(flow_data['labels'])
+            n_flows = len(flow_data['sources'])
+            print(f"{scenario_name}: {n_nodes} nodes, {n_flows} flows")
+
         # Create individual scenario plots
         create_sankey_grid(prod_df, trans_df, technology, scenarios, output_dir)
 
         # Create combined grid plot
-        create_combined_scenario_grid(prod_df, trans_df, technology, scenarios, output_dir)
+        create_combined_scenario_grid(prod_df, trans_df, technology, scenarios, output_dir, n_cols=4)
 
     print(f"\nAll Sankey plots saved to: {output_dir}")
 
