@@ -232,6 +232,154 @@ def prepare_flows_for_sankey(prod_df, trans_df, technology, scenario_col):
     }
 
 
+def prepare_combined_flows_for_sankey(prod_df, trans_df, technologies, scenario_col):
+    """
+    Prepare flow data for Sankey diagram combining multiple production technologies.
+    This is useful for materials like Copper and Nickel that have both recycling and refinement.
+
+    Parameters:
+    -----------
+    prod_df : DataFrame
+        Production flow data
+    trans_df : DataFrame
+        Transport flow data
+    technologies : list
+        List of technology names to combine (e.g., ['Copper_recycling', 'Copper_refinement'])
+    scenario_col : str
+        Scenario column name (e.g., 'value_scenario_', 'value_scenario_DemandMet')
+
+    Returns:
+    --------
+    dict : Dictionary with 'sources', 'targets', 'values', 'labels', 'x_positions', 'y_positions'
+    """
+    # Get transport technology name (should be same for all input technologies)
+    if technologies[0] in ['Copper_recycling', 'Copper_refinement']:
+        transport_tech = 'Copper_transport'
+    elif technologies[0] in ['Nickel_recycling', 'Nickel_refinement']:
+        transport_tech = 'Nickel_transport'
+    else:
+        raise ValueError(f"Unknown technology group: {technologies}")
+
+    # Filter production data for all technologies
+    prod_data = prod_df[prod_df['technology'].isin(technologies)].copy()
+
+    # Filter transport data
+    trans_data = trans_df[trans_df['technology'] == transport_tech].copy()
+
+    # Calculate exports and imports by country
+    exports_by_country = {}
+    imports_by_country = {}
+
+    for _, row in trans_data.iterrows():
+        if scenario_col in row and pd.notna(row[scenario_col]) and 'edge' in row:
+            flow_value = float(row[scenario_col])
+            if flow_value > 0:
+                try:
+                    exporter, importer = row['edge'].split('-')
+                    exports_by_country[exporter] = exports_by_country.get(exporter, 0) + flow_value
+                    imports_by_country[importer] = imports_by_country.get(importer, 0) + flow_value
+                except (ValueError, AttributeError):
+                    continue
+
+    # Get all countries that have production or consumption
+    # Aggregate production from all technologies
+    production_by_country = {}
+    for _, row in prod_data.iterrows():
+        if scenario_col in row and pd.notna(row[scenario_col]):
+            production = float(row[scenario_col])
+            if production > 0:
+                location = row['node']
+                production_by_country[location] = production_by_country.get(location, 0) + production
+
+    # Calculate domestic use for each country
+    domestic_by_country = {}
+    for country, production in production_by_country.items():
+        exports = exports_by_country.get(country, 0)
+        domestic_use = production - exports
+        if domestic_use > 0:
+            domestic_by_country[country] = domestic_use
+
+    # Get all unique countries (left and right)
+    all_countries = set()
+    all_countries.update(production_by_country.keys())
+    all_countries.update(imports_by_country.keys())
+
+    # Group countries by region, then sort within groups
+    region_groups = {
+        'Asia': ['CHN', 'JPN', 'KOR', 'ROA'],
+        'Europe': ['EUR', 'DEU', 'ITA', 'AUT', 'CZE', 'ROE'],
+        'Americas': ['USA', 'BRA'],
+        'Oceania': ['AUS'],
+        'Other': ['ROW']
+    }
+    all_countries_ordered = []
+    for region in ['Asia', 'Europe', 'Americas', 'Oceania', 'Other']:
+        all_countries_ordered.extend([c for c in region_groups[region] if c in all_countries])
+    all_countries = all_countries_ordered
+
+    # Create left (source) and right (destination) nodes
+    node_labels = []
+    left_nodes = {}  # country -> node_index
+    right_nodes = {}  # country -> node_index
+
+    idx = 0
+    for country in all_countries:
+        # Left node (source/production)
+        node_labels.append(country)
+        left_nodes[country] = idx
+        idx += 1
+
+    for country in all_countries:
+        # Right node (destination/consumption)
+        node_labels.append(country)
+        right_nodes[country] = idx
+        idx += 1
+
+    # Build flows
+    sources = []
+    targets = []
+    values = []
+
+    # Add domestic flows (left to right, same country)
+    for country, domestic_use in domestic_by_country.items():
+        sources.append(left_nodes[country])
+        targets.append(right_nodes[country])
+        values.append(domestic_use)
+
+    # Add trade flows (left source to right destination)
+    for _, row in trans_data.iterrows():
+        if scenario_col in row and pd.notna(row[scenario_col]) and 'edge' in row:
+            flow_value = float(row[scenario_col])
+            if flow_value > 0:
+                try:
+                    exporter, importer = row['edge'].split('-')
+                    sources.append(left_nodes[exporter])
+                    targets.append(right_nodes[importer])
+                    values.append(flow_value)
+                except (ValueError, AttributeError, KeyError):
+                    continue
+
+    # Optimize node positions
+    n_countries = len(all_countries)
+    if n_countries > 1:
+        y_positions = [0.01 + (i * 0.9 / (n_countries - 1)) for i in range(n_countries)]
+    else:
+        y_positions = [0.5]
+
+    y_positions = y_positions * 2
+    x_positions = [0.15] * n_countries + [0.85] * n_countries
+
+    return {
+        'sources': sources,
+        'targets': targets,
+        'values': values,
+        'labels': node_labels,
+        'x_positions': x_positions,
+        'y_positions': y_positions,
+        'n_countries': n_countries
+    }
+
+
 def calculate_optimal_layout(flow_data):
     """
     根据节点和流线数量计算最优的布局参数
@@ -403,7 +551,6 @@ def create_sankey_grid(prod_df, trans_df, technology, scenarios, output_dir):
             fig.write_html(str(output_html))
             print(f"Saved: {output_html}")
 
-
 def create_combined_scenario_grid(prod_df, trans_df, technology, scenarios, output_dir,
                                   n_cols=4, x_spacing=0.03, y_spacing=0.12):
     """
@@ -431,11 +578,11 @@ def create_combined_scenario_grid(prod_df, trans_df, technology, scenarios, outp
     n_scenarios = len(scenarios)
     n_rows = (n_scenarios + n_cols - 1) // n_cols
 
-    # 动态计算整体高度 - 为底部留出更多空间
+    # åŠ¨æ€è®¡ç®—æ•´ä½“é«˜åº¦ - ä¸ºåº•éƒ¨ç•™å‡ºæ›´å¤šç©ºé—´
     base_height_per_plot = 900
     extra_height_for_bottom = 300
     total_height = (base_height_per_plot * n_rows) + extra_height_for_bottom
-    total_width = 2200  # 增加宽度以容纳4个图表
+    total_width = 2200  # å¢žåŠ å®½åº¦ä»¥å®¹çº³4ä¸ªå›¾è¡¨
 
     # Create figure
     fig = go.Figure()
@@ -455,16 +602,16 @@ def create_combined_scenario_grid(prod_df, trans_df, technology, scenarios, outp
         subplot_width = (1.0 - (n_cols + 1) * x_spacing) / n_cols
         subplot_height = (1.0 - (n_rows + 1) * y_spacing) / n_rows
 
-        # Calculate domain positions - 为底部留出更多空间
+        # Calculate domain positions - ä¸ºåº•éƒ¨ç•™å‡ºæ›´å¤šç©ºé—´
         x_domain = [
             x_spacing + col * (subplot_width + x_spacing),
             x_spacing + col * (subplot_width + x_spacing) + subplot_width
         ]
 
-        # 调整y域位置，为底部留出更多空间
+        # è°ƒæ•´yåŸŸä½ç½®ï¼Œä¸ºåº•éƒ¨ç•™å‡ºæ›´å¤šç©ºé—´
         y_domain = [
-            1.0 - y_spacing - (row + 1) * (subplot_height + y_spacing) + 0.05,  # 上移
-            1.0 - y_spacing - row * (subplot_height + y_spacing) - 0.05  # 下移，为底部留空间
+            1.0 - y_spacing - (row + 1) * (subplot_height + y_spacing) + 0.05,  # ä¸Šç§»
+            1.0 - y_spacing - row * (subplot_height + y_spacing) - 0.05  # ä¸‹ç§»ï¼Œä¸ºåº•éƒ¨ç•™ç©ºé—´
         ]
 
         # Get colors for nodes and links
@@ -482,8 +629,8 @@ def create_combined_scenario_grid(prod_df, trans_df, technology, scenarios, outp
             arrangement='snap',
             domain=dict(x=x_domain, y=y_domain),
             node=dict(
-                pad=5,  # 减小间距以适应网格
-                thickness=10,  # 减小厚度
+                pad=5,  # å‡å°é—´è·ä»¥é€‚åº”ç½‘æ ¼
+                thickness=10,  # å‡å°åŽšåº¦
                 line=dict(color="white", width=1),
                 label=flow_data['labels'],
                 color=node_colors,
@@ -498,12 +645,12 @@ def create_combined_scenario_grid(prod_df, trans_df, technology, scenarios, outp
             )
         ))
 
-        # Add scenario title - 调整位置避免重叠
+        # Add scenario title - è°ƒæ•´ä½ç½®é¿å…é‡å
         total_flow = sum(flow_data['values'])
         annotations.append(dict(
             text=f"<b>{scenario_name}</b><br>Total: {total_flow:.1f} GW",
             x=(x_domain[0] + x_domain[1]) / 2,
-            y=y_domain[1] + 0.2,  # 稍微上移标题
+            y=y_domain[1] + 0.2,  # ç¨å¾®ä¸Šç§»æ ‡é¢˜
             xref="paper",
             yref="paper",
             showarrow=False,
@@ -527,18 +674,194 @@ def create_combined_scenario_grid(prod_df, trans_df, technology, scenarios, outp
         paper_bgcolor='white',
         plot_bgcolor='white',
         annotations=annotations,
-        margin=dict(t=50, b=350, l=50, r=50)  # 显著增加底部边距
+        margin=dict(t=50, b=350, l=50, r=50)  # æ˜¾è‘—å¢žåŠ åº•éƒ¨è¾¹è·
     )
 
     # Save combined grid
     output_file = output_dir / f"sankey_{technology}_all_scenarios_2035.png"
-    fig.write_image(str(output_file), scale=3)  # 提高分辨率
+    fig.write_image(str(output_file), scale=3)  # æé«˜åˆ†è¾¨çŽ‡
     print(f"Saved combined grid: {output_file}")
 
     output_html = output_dir / f"sankey_{technology}_all_scenarios_2035.html"
     fig.write_html(str(output_html))
     print(f"Saved combined grid: {output_html}")
 
+def create_sankey_grid_combined(prod_df, trans_df, technologies, material_name, scenarios, output_dir):
+    """
+    Create individual Sankey diagrams for each scenario using combined technologies.
+
+    Parameters:
+    -----------
+    prod_df : DataFrame
+        Production flow data
+    trans_df : DataFrame
+        Transport flow data
+    technologies : list
+        List of technology names to combine
+    material_name : str
+        Material name for display (e.g., 'Copper', 'Nickel')
+    scenarios : dict
+        Dictionary mapping scenario column names to display names
+    output_dir : Path
+        Output directory for saving plots
+    """
+    # Create individual plots for each scenario
+    for scenario_col, scenario_name in scenarios.items():
+        flow_data = prepare_combined_flows_for_sankey(prod_df, trans_df, technologies, scenario_col)
+
+        if not flow_data['sources']:
+            print(f"No data for {material_name} - {scenario_name}")
+            continue
+
+        title = f"{material_name} - {scenario_name} (2035)"
+
+        fig = create_sankey_figure(flow_data, title)
+
+        if fig:
+            # Save as PNG
+            output_file = output_dir / f"sankey_{material_name}_{scenario_name}_2035.png"
+            fig.write_image(str(output_file), scale=2)
+            print(f"Saved: {output_file}")
+
+            # Save as HTML for interactivity
+            output_html = output_dir / f"sankey_{material_name}_{scenario_name}_2035.html"
+            fig.write_html(str(output_html))
+            print(f"Saved: {output_html}")
+
+def create_combined_scenario_grid_combined(prod_df, trans_df, technologies, material_name, scenarios, output_dir,
+                                          n_cols=4, x_spacing=0.03, y_spacing=0.12):
+    """
+    Create a single figure with all scenarios in a grid layout for combined technologies.
+
+    Parameters:
+    -----------
+    prod_df : DataFrame
+        Production flow data
+    trans_df : DataFrame
+        Transport flow data
+    technologies : list
+        List of technology names to combine
+    material_name : str
+        Material name for display (e.g., 'Copper', 'Nickel')
+    scenarios : dict
+        Dictionary mapping scenario column names to display names
+    output_dir : Path
+        Output directory for saving plots
+    n_cols : int
+        Number of columns in the grid (default: 4 for single row)
+    x_spacing : float
+        Horizontal spacing between subplots
+    y_spacing : float
+        Vertical spacing between subplots
+    """
+    n_scenarios = len(scenarios)
+    n_rows = (n_scenarios + n_cols - 1) // n_cols
+
+    # åŠ¨æ€è®¡ç®—æ•´ä½"é«˜åº¦ - ä¸ºåº•éƒ¨ç•™å‡ºæ›´å¤šç©ºé—´
+    base_height_per_plot = 900
+    extra_height_for_bottom = 300
+    total_height = (base_height_per_plot * n_rows) + extra_height_for_bottom
+    total_width = 2200  # å¢žåŠ å®½åº¦ä»¥å®¹çº³4ä¸ªå›¾è¡¨
+
+    # Create figure
+    fig = go.Figure()
+    annotations = []
+
+    for i, (scenario_col, scenario_name) in enumerate(scenarios.items()):
+        flow_data = prepare_combined_flows_for_sankey(prod_df, trans_df, technologies, scenario_col)
+
+        if not flow_data['sources']:
+            continue
+
+        # Calculate position in grid
+        row = i // n_cols
+        col = i % n_cols
+
+        # Calculate subplot dimensions with more vertical space
+        subplot_width = (1.0 - (n_cols + 1) * x_spacing) / n_cols
+        subplot_height = (1.0 - (n_rows + 1) * y_spacing) / n_rows
+
+        # Calculate domain positions - ä¸ºåº•éƒ¨ç•™å‡ºæ›´å¤šç©ºé—´
+        x_domain = [
+            x_spacing + col * (subplot_width + x_spacing),
+            x_spacing + col * (subplot_width + x_spacing) + subplot_width
+        ]
+
+        # è°ƒæ•´yåŸŸä½ç½®ï¼Œä¸ºåº•éƒ¨ç•™å‡ºæ›´å¤šç©ºé—´
+        y_domain = [
+            1.0 - y_spacing - (row + 1) * (subplot_height + y_spacing) + 0.05,  # ä¸Šç§»
+            1.0 - y_spacing - row * (subplot_height + y_spacing) - 0.05  # ä¸‹ç§»ï¼Œä¸ºåº•éƒ¨ç•™ç©ºé—´
+        ]
+
+        # Get colors for nodes and links
+        node_colors = []
+        for label in flow_data['labels']:
+            node_colors.append(get_node_color(label, '100%'))
+
+        link_colors = []
+        for src_idx in flow_data['sources']:
+            src_label = flow_data['labels'][src_idx]
+            link_colors.append(get_link_color_with_alpha(src_label, alpha=0.4))
+
+        # Add Sankey trace with optimized parameters for grid
+        fig.add_trace(go.Sankey(
+            arrangement='snap',
+            domain=dict(x=x_domain, y=y_domain),
+            node=dict(
+                pad=5,  # å‡å°é—´è·ä»¥é€‚åº"ç½'æ ¼
+                thickness=10,  # å‡å°åŽšåº¦
+                line=dict(color="white", width=1),
+                label=flow_data['labels'],
+                color=node_colors,
+                x=flow_data['x_positions'],
+                y=flow_data['y_positions']
+            ),
+            link=dict(
+                source=flow_data['sources'],
+                target=flow_data['targets'],
+                value=flow_data['values'],
+                color=link_colors
+            )
+        ))
+
+        # Add scenario title - è°ƒæ•´ä½ç½®é¿å…é‡å
+        total_flow = sum(flow_data['values'])
+        annotations.append(dict(
+            text=f"<b>{scenario_name}</b><br>Total: {total_flow:.1f} GW",
+            x=(x_domain[0] + x_domain[1]) / 2,
+            y=y_domain[1] + 0.2,  # ç¨å¾®ä¸Šç§»æ ‡é¢˜
+            xref="paper",
+            yref="paper",
+            showarrow=False,
+            font=dict(size=14, family='Arial', color='#333'),
+            align='center',
+            xanchor='center'
+        ))
+
+    fig.update_layout(
+        title=dict(
+            text=f"<b>{material_name} - All Scenarios (2035)</b>",
+            x=0.5,
+            xanchor='center',
+            font=dict(size=20, family='Arial', weight='bold', color='#333')
+        ),
+        width=total_width,
+        height=total_height,
+        showlegend=False,
+        paper_bgcolor='white',
+        plot_bgcolor='white',
+        annotations=annotations,
+        margin=dict(t=50, b=350, l=50, r=50)  # æ˜¾è'—å¢žåŠ åº•éƒ¨è¾¹è·
+    )
+
+    # Save combined grid
+    output_file = output_dir / f"sankey_{material_name}_all_scenarios_2035.png"
+    fig.write_image(str(output_file), scale=3)  # æé«˜åˆ†è¾¨çŽ‡
+    print(f"Saved combined grid: {output_file}")
+
+    output_html = output_dir / f"sankey_{material_name}_all_scenarios_2035.html"
+    fig.write_html(str(output_html))
+    print(f"Saved combined grid: {output_html}")
 
 def main():
     """Main execution function"""
@@ -562,10 +885,18 @@ def main():
         'value_scenario_SelfSuff40': 'SelfSuff40',
         'value_scenario_Tariffs': 'Tariffs'
     }
-
+    scenariosm = {
+        'value_scenario_': 'Base',
+        'value_scenario_DemandMet': 'DemandMet',
+        'value_scenario_SelfSuff40': 'SelfSuff40',
+        'value_scenario_Recycling': 'Recycling'
+    }
     # Define technologies
     technologies = ['HP_assembly', 'HEX_manufacturing', 'Compressor_manufacturing']
-
+    material_technologies = {
+        'Copper': ['Copper_recycling', 'Copper_refinement'],
+        'Nickel': ['Nickel_recycling', 'Nickel_refinement']
+    }
     # Create Sankey plots for each technology
     for technology in technologies:
         print(f"\nCreating Sankey plots for {technology}...")
@@ -582,6 +913,20 @@ def main():
 
         # Create combined grid plot
         create_combined_scenario_grid(prod_df, trans_df, technology, scenarios, output_dir, n_cols=4)
+
+    for material_name, tech_list in material_technologies.items():
+        for scenario_col, scenario_name in scenariosm.items():
+            flow_data = prepare_combined_flows_for_sankey(prod_df, trans_df, tech_list, scenario_col)
+            n_nodes = len(flow_data['labels'])
+            n_flows = len(flow_data['sources'])
+            print(f"{scenario_name}: {n_nodes} nodes, {n_flows} flows")
+
+            # Create individual scenario plots
+        create_sankey_grid_combined(prod_df, trans_df, tech_list, material_name, scenariosm, output_dir)
+
+        # Create combined grid plot
+        create_combined_scenario_grid_combined(prod_df, trans_df, tech_list, material_name, scenariosm, output_dir,
+                                               n_cols=4)
 
     print(f"\nAll Sankey plots saved to: {output_dir}")
 

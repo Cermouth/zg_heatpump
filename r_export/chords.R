@@ -28,7 +28,7 @@ color_mapping <- setNames(mycolors, all_regions)
 output_dir <- "./"
 dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
-# Load all data
+# Load all data for HP, HEX, COM
 all_data <- read.csv("all_trade_flows_2035.csv")
 
 # Ensure From and To are factors with all_regions levels
@@ -92,5 +92,72 @@ for (sce in scenarios) {
 
 dev.off()
 
-print("All chord diagrams created successfully in one PDF!")
 print(paste("Output:", output_dir, "/chord_all_scenarios_2035.pdf"))
+
+
+
+# Load all data for Cu, Ni ------------------------------------------------------
+allm_data <- read.csv("material_trade_flows_2035.csv")
+
+# Ensure From and To are factors with all_regions levels
+allm_data <- allm_data %>%
+  mutate(From = factor(From, levels = all_regions),
+         To = factor(To, levels = all_regions))
+
+# Define scenarios and technologies
+scenariosm <- c('Base', 'DemandMet', 'SelfSuff40', 'Recycling')
+technologiesm <- c('Copper', 'Nickel')
+
+# Create combined PDF with all scenarios and technologies
+pdf(paste0(output_dir, '/_chord_allm_scenarios_2035.pdf'), height = 10, width = 10)
+par(mfrow = c(4, 2), mar = rep(0.1, 4))
+
+# Loop through scenarios and technologies
+for (sce in scenariosm) {
+  for (tech in technologiesm) {
+    
+    # Filter data for this scenario and technology
+    data_subset <- allm_data %>%
+      filter(scenario_name == sce, Product == tech) %>%
+      select(From, To, Value) %>%
+      unique()
+    
+    if(nrow(data_subset) > 0) {
+      circos.clear()
+      circos.par(start.degree = 90, gap.degree = 2, 
+                 points.overflow.warning = FALSE)
+      
+      chordDiagram(data_subset,
+                   grid.col = color_mapping,
+                   grid.border = NA,
+                   transparency = 0.25,
+                   directional = 1,
+                   direction.type = c("arrows", "diffHeight"),
+                   diffHeight = -0.04,
+                   annotationTrack = "grid",
+                   annotationTrackHeight = c(0.05, 0.1),
+                   link.border = 'white',
+                   link.lwd = 0.05,
+                   link.arr.type = "big.arrow",
+                   link.sort = TRUE,
+                   link.largest.ontop = TRUE)
+      
+      circos.trackPlotRegion(track.index = 1, panel.fun = function(x, y) {
+        xlim = get.cell.meta.data("xlim")
+        ylim = get.cell.meta.data("ylim")
+        sector.name = get.cell.meta.data("sector.index")
+        circos.text(mean(xlim), ylim[1] + 0.1, sector.name,
+                    facing = "clockwise", niceFacing = TRUE,
+                    adj = c(-0.5, 0.5), cex = 0.6)
+      })
+
+      title(main = paste(sce, tech), cex.main = 0.8)
+    }
+    
+    print(paste("Created:", sce, "-", tech))
+  }
+}
+
+dev.off()
+
+print(paste("Output:", output_dir, "/chord_allm_scenarios_2035.pdf"))

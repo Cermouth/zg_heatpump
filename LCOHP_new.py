@@ -905,14 +905,14 @@ def save_results(output_dir, filename, df, index=False):
 def main():
     """Main function to execute the analysis"""
     # File paths
-    flow_file = './HP_Model/parameter_results/flow_conversion_output/flow_conversion_output_scenarios.csv'
-    opex_file = './HP_Model/parameter_results/cost_opex_yearly/cost_opex_yearly_scenarios.csv'
-    capex_file = './HP_Model/parameter_results/cost_capex/cost_capex_scenarios.csv'
-    transport_file = "./HP_Model/parameter_results/flow_transport/flow_transport_scenarios.csv"
+    flow_file = './parameter_results/flow_conversion_output/flow_conversion_output_scenarios.csv'
+    opex_file = './parameter_results/cost_opex_yearly/cost_opex_yearly_scenarios.csv'
+    capex_file = './parameter_results/cost_capex/cost_capex_scenarios.csv'
+    transport_file = "./parameter_results/flow_transport/flow_transport_scenarios.csv"
 
     # Output directory
     output_dir = Path(
-        "./HP_Model/LCOHP")
+        "./LCOHP")
     output_dir.mkdir(parents=True, exist_ok=True)
 
     print("Starting cost analysis...")

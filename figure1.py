@@ -189,11 +189,11 @@ def process_capex_data(capex_df, scenario_bau, scenario_nze):
         region_df = capex_df[capex_df['region'] == region]
 
         capex_by_region[region] = {
-            'BAU': region_df[scenario_bau].sum() if scenario_bau in scenario_cols else 0,
-            'NZE': region_df[scenario_nze].sum() if scenario_nze in scenario_cols else 0
+            'Base': region_df[scenario_bau].sum() if scenario_bau in scenario_cols else 0,
+            'DemandMet': region_df[scenario_nze].sum() if scenario_nze in scenario_cols else 0
         }
 
-        print(f"{region}: BAU={capex_by_region[region]['BAU']:.2e}, NZE={capex_by_region[region]['NZE']:.2e}")
+        print(f"{region}: BAU={capex_by_region[region]['Base']:.2e}, NZE={capex_by_region[region]['DemandMet']:.2e}")
 
     return capex_by_region
 
@@ -246,15 +246,15 @@ def process_opex_data(opex_df, scenario_bau, scenario_nze):
             region_df = production_df[production_df['region'] == region]
 
             production_by_region[region] = {
-                'BAU': region_df[scenario_bau].sum() if scenario_bau in scenario_cols else 0,
-                'NZE': region_df[scenario_nze].sum() if scenario_nze in scenario_cols else 0
+                'Base': region_df[scenario_bau].sum() if scenario_bau in scenario_cols else 0,
+                'DemandMet': region_df[scenario_nze].sum() if scenario_nze in scenario_cols else 0
             }
 
             print(
-                f"{region} Production: BAU={production_by_region[region]['BAU']:.2e}, NZE={production_by_region[region]['NZE']:.2e}")
+                f"{region} Production: BAU={production_by_region[region]['Base']:.2e}, NZE={production_by_region[region]['DemandMet']:.2e}")
     else:
         print("No production cost data found")
-        production_by_region = {region: {'BAU': 0, 'NZE': 0} for region in ['CHN', 'EUR', 'USA', 'ROW']}
+        production_by_region = {region: {'Base': 0, 'DemandMet': 0} for region in ['CHN', 'EUR', 'USA', 'ROW']}
 
     # Process trade costs from transport technologies
     trade_by_region = {}
@@ -281,18 +281,18 @@ def process_opex_data(opex_df, scenario_bau, scenario_nze):
                 region_df = valid_transport[valid_transport['region'] == region]
 
                 trade_by_region[region] = {
-                    'BAU': region_df[scenario_bau].sum() if scenario_bau in scenario_cols else 0,
-                    'NZE': region_df[scenario_nze].sum() if scenario_nze in scenario_cols else 0
+                    'Base': region_df[scenario_bau].sum() if scenario_bau in scenario_cols else 0,
+                    'DemandMet': region_df[scenario_nze].sum() if scenario_nze in scenario_cols else 0
                 }
 
                 print(
-                    f"{region} Trade (imports): BAU={trade_by_region[region]['BAU']:.2e}, NZE={trade_by_region[region]['NZE']:.2e}")
+                    f"{region} Trade (imports): BAU={trade_by_region[region]['Base']:.2e}, NZE={trade_by_region[region]['DemandMet']:.2e}")
         else:
             print("No valid transport locations found (expected format: NODE1-NODE2)")
-            trade_by_region = {region: {'BAU': 0, 'NZE': 0} for region in ['CHN', 'EUR', 'USA', 'ROW']}
+            trade_by_region = {region: {'Base': 0, 'DemandMet': 0} for region in ['CHN', 'EUR', 'USA', 'ROW']}
     else:
         print("No trade data found")
-        trade_by_region = {region: {'BAU': 0, 'NZE': 0} for region in ['CHN', 'EUR', 'USA', 'ROW']}
+        trade_by_region = {region: {'Base': 0, 'DemandMet': 0} for region in ['CHN', 'EUR', 'USA', 'ROW']}
 
     return production_by_region, trade_by_region
 
@@ -311,29 +311,29 @@ def combine_costs(capex_by_region, production_by_region, trade_by_region):
 
     for region in ['CHN', 'EUR', 'USA', 'ROW']:
         combined_costs[region] = {
-            'BAU': [
-                capex_by_region.get(region, {}).get('BAU', 0),
-                production_by_region.get(region, {}).get('BAU', 0),
-                trade_by_region.get(region, {}).get('BAU', 0)
+            'Base': [
+                capex_by_region.get(region, {}).get('Base', 0),
+                production_by_region.get(region, {}).get('Base', 0),
+                trade_by_region.get(region, {}).get('Base', 0)
             ],
-            'NZE': [
-                capex_by_region.get(region, {}).get('NZE', 0),
-                production_by_region.get(region, {}).get('NZE', 0),
-                trade_by_region.get(region, {}).get('NZE', 0)
+            'DemandMet': [
+                capex_by_region.get(region, {}).get('DemandMet', 0),
+                production_by_region.get(region, {}).get('DemandMet', 0),
+                trade_by_region.get(region, {}).get('DemandMet', 0)
             ]
         }
 
-        total_bau = sum(combined_costs[region]['BAU'])
-        total_nze = sum(combined_costs[region]['NZE'])
+        total_bau = sum(combined_costs[region]['Base'])
+        total_nze = sum(combined_costs[region]['DemandMet'])
 
         print(f"\n{region}:")
-        print(f"  BAU: Capital={combined_costs[region]['BAU'][0]:.2e}, "
-              f"Production={combined_costs[region]['BAU'][1]:.2e}, "
-              f"Trade={combined_costs[region]['BAU'][2]:.2e}, "
+        print(f"  BAU: Capital={combined_costs[region]['Base'][0]:.2e}, "
+              f"Production={combined_costs[region]['Base'][1]:.2e}, "
+              f"Trade={combined_costs[region]['Base'][2]:.2e}, "
               f"Total={total_bau:.2e}")
-        print(f"  NZE: Capital={combined_costs[region]['NZE'][0]:.2e}, "
-              f"Production={combined_costs[region]['NZE'][1]:.2e}, "
-              f"Trade={combined_costs[region]['NZE'][2]:.2e}, "
+        print(f"  NZE: Capital={combined_costs[region]['DemandMet'][0]:.2e}, "
+              f"Production={combined_costs[region]['DemandMet'][1]:.2e}, "
+              f"Trade={combined_costs[region]['DemandMet'][2]:.2e}, "
               f"Total={total_nze:.2e}")
 
     return combined_costs
@@ -429,8 +429,8 @@ def extract_region_scenario_data(flow_df, capacity_df, demand_df,
     """Extract data for a specific region and both scenarios"""
 
     region_data = {
-        'BAU': {'capacity': [], 'production': [], 'demand': []},
-        'NZE': {'capacity': [], 'production': [], 'demand': []}
+        'Base': {'capacity': [], 'production': [], 'demand': []},
+        'DemandMet': {'capacity': [], 'production': [], 'demand': []}
     }
 
     # Aggregate by region and year
@@ -456,16 +456,16 @@ def extract_region_scenario_data(flow_df, capacity_df, demand_df,
         prod_nze = flow_by_region[flow_by_region['year'] == year][flow_nze_col]
         dem = demand_by_region[demand_by_region['year'] == year]['demand']
 
-        region_data['BAU']['capacity'].append(cap_bau.values[0] if len(cap_bau) > 0 else 0)
-        region_data['BAU']['production'].append(prod_bau.values[0] if len(prod_bau) > 0 else 0)
-        region_data['BAU']['demand'].append(dem.values[0] if len(dem) > 0 else 0)
+        region_data['Base']['capacity'].append(cap_bau.values[0] if len(cap_bau) > 0 else 0)
+        region_data['Base']['production'].append(prod_bau.values[0] if len(prod_bau) > 0 else 0)
+        region_data['Base']['demand'].append(dem.values[0] if len(dem) > 0 else 0)
 
-        region_data['NZE']['capacity'].append(cap_nze.values[0] if len(cap_nze) > 0 else 0)
-        region_data['NZE']['production'].append(prod_nze.values[0] if len(prod_nze) > 0 else 0)
-        region_data['NZE']['demand'].append(dem.values[0] if len(dem) > 0 else 0)
+        region_data['DemandMet']['capacity'].append(cap_nze.values[0] if len(cap_nze) > 0 else 0)
+        region_data['DemandMet']['production'].append(prod_nze.values[0] if len(prod_nze) > 0 else 0)
+        region_data['DemandMet']['demand'].append(dem.values[0] if len(dem) > 0 else 0)
 
     # Use actual cost data
-    region_data['costs'] = costs_by_region.get(region, {'BAU': [0, 0, 0], 'NZE': [0, 0, 0]})
+    region_data['costs'] = costs_by_region.get(region, {'Base': [0, 0, 0], 'DemandMet': [0, 0, 0]})
 
     return region_data
 
@@ -528,20 +528,20 @@ bar_width = 0.5
 # Calculate maximum y value
 all_values = []
 for region in regions_list:
-    all_values.extend(data[region]['BAU']['capacity'])
-    all_values.extend(data[region]['BAU']['production'])
-    all_values.extend(data[region]['BAU']['demand'])
-    all_values.extend(data[region]['NZE']['capacity'])
-    all_values.extend(data[region]['NZE']['production'])
-    all_values.extend(data[region]['NZE']['demand'])
+    all_values.extend(data[region]['Base']['capacity'])
+    all_values.extend(data[region]['Base']['production'])
+    all_values.extend(data[region]['Base']['demand'])
+    all_values.extend(data[region]['DemandMet']['capacity'])
+    all_values.extend(data[region]['DemandMet']['production'])
+    all_values.extend(data[region]['DemandMet']['demand'])
 
 maxY = max(all_values) * 1.1 if max(all_values) > 0 else 100
 
 # Calculate max cost - convert to billions if needed
 all_costs = []
 for region in regions_list:
-    all_costs.append(sum(data[region]['costs']['BAU']))
-    all_costs.append(sum(data[region]['costs']['NZE']))
+    all_costs.append(sum(data[region]['costs']['Base']))
+    all_costs.append(sum(data[region]['costs']['DemandMet']))
 
 # Check if costs are very large (likely in dollars, need to convert to billions)
 max_cost_raw = max(all_costs) if all_costs else 0
@@ -571,12 +571,12 @@ for row, region in enumerate(regions_list):
     ax1.text(0.04, 0.96, subplot_labels[label_index], transform=ax1.transAxes,
              fontsize=12, fontweight='bold', va='top', ha='left')
 
-    ax1.bar(x_pos, region_data['BAU']['production'], width=bar_width,
+    ax1.bar(x_pos, region_data['Base']['production'], width=bar_width,
             color=bau_colors['production'], alpha=0.8)
-    ax1.plot(x_pos, region_data['BAU']['capacity'], '+',
+    ax1.plot(x_pos, region_data['Base']['capacity'], '+',
              color=bau_colors['capacity'], markersize=10, markerfacecolor='none',
              markeredgewidth=3)
-    ax1.plot(x_pos, region_data['BAU']['demand'], '_',
+    ax1.plot(x_pos, region_data['Base']['demand'], '_',
              color=bau_colors['demand'], markersize=10, markerfacecolor='none',
              markeredgewidth=3)
 
@@ -595,12 +595,12 @@ for row, region in enumerate(regions_list):
     ax2.text(0.04, 0.96, subplot_labels[label_index], transform=ax2.transAxes,
              fontsize=12, fontweight='bold', va='top', ha='left')
 
-    ax2.bar(x_pos, region_data['NZE']['production'], width=bar_width,
+    ax2.bar(x_pos, region_data['DemandMet']['production'], width=bar_width,
             color=nze_colors['production'], alpha=0.8)
-    ax2.plot(x_pos, region_data['NZE']['capacity'], '+',
+    ax2.plot(x_pos, region_data['DemandMet']['capacity'], '+',
              color=nze_colors['capacity'], markersize=10, markerfacecolor='none',
              markeredgewidth=3)
-    ax2.plot(x_pos, region_data['NZE']['demand'], '_',
+    ax2.plot(x_pos, region_data['DemandMet']['demand'], '_',
              color=nze_colors['demand'], markersize=10, markerfacecolor='none',
              markeredgewidth=3)
 
@@ -623,8 +623,8 @@ for row, region in enumerate(regions_list):
     cost_width = 0.4
 
     # Scale costs
-    costs_bau_scaled = [c / cost_scale for c in region_data['costs']['BAU']]
-    costs_nze_scaled = [c / cost_scale for c in region_data['costs']['NZE']]
+    costs_bau_scaled = [c / cost_scale for c in region_data['costs']['Base']]
+    costs_nze_scaled = [c / cost_scale for c in region_data['costs']['DemandMet']]
 
     # BAU stacked bar
     bottom_bau = 0
@@ -650,7 +650,7 @@ for row, region in enumerate(regions_list):
     ax3.set_ylim(0, maxCost)
     ax3.set_ylabel(cost_label, fontsize=12)
     ax3.set_xticks(cost_x_pos)
-    ax3.set_xticklabels(['BAU', 'NZE'])
+    ax3.set_xticklabels(['Base', 'Demand-met'])
     ax3.set_xlim(-0.5, 1.5)
     ax3.grid(True, alpha=0.2)
     if row == 0:
