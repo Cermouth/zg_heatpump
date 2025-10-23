@@ -6,7 +6,6 @@ import os
 from pathlib import Path
 
 # Set style
-plt.style.use('seaborn-v0_8-whitegrid')
 plt.rcParams['font.family'] = 'arial'
 plt.rcParams['font.size'] = 12
 plt.rcParams['axes.labelsize'] = 12
@@ -17,6 +16,7 @@ plt.rcParams['legend.fontsize'] = 12
 plt.rcParams['figure.titlesize'] = 12
 plt.rcParams['axes.grid'] = True
 plt.rcParams['grid.linestyle'] = '-'
+
 
 # ====================================
 # DATA EXTRACTION AND REGION MAPPING
@@ -580,7 +580,7 @@ for row, region in enumerate(regions_list):
              color=bau_colors['demand'], markersize=10, markerfacecolor='none',
              markeredgewidth=3)
 
-    ax1.set_ylim(0, maxY)
+    ax1.set_ylim(0, 200)
     ax1.set_ylabel('GW', fontsize=12)
     ax1.set_xticks(x_pos)
     ax1.set_xticklabels(years)
@@ -604,7 +604,7 @@ for row, region in enumerate(regions_list):
              color=nze_colors['demand'], markersize=10, markerfacecolor='none',
              markeredgewidth=3)
 
-    ax2.set_ylim(0, maxY)
+    ax2.set_ylim(0, 200)
     ax2.set_ylabel('GW', fontsize=12)
     ax2.set_xticks(x_pos)
     ax2.set_xticklabels(years)
@@ -646,8 +646,8 @@ for row, region in enumerate(regions_list):
         ax3.bar(cost_x_pos[1], cost, cost_width, bottom=bottom_nze,
                 color=colors_nze[i], edgecolor='white', linewidth=0.5)
         bottom_nze += cost
+        plt.ylim(0,120)
 
-    ax3.set_ylim(0, maxCost)
     ax3.set_ylabel(cost_label, fontsize=12)
     ax3.set_xticks(cost_x_pos)
     ax3.set_xticklabels(['Base', 'Demand-met'])
