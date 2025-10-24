@@ -401,11 +401,11 @@ def load_and_process_data(flow_file, capacity_file, demand_file, parameter_resul
 
     flow_bau_col = flow_scenario_cols[0]
     flow_nze_col = 'value_scenario_DemandMet' if 'value_scenario_DemandMet' in flow_scenario_cols else \
-    flow_scenario_cols[1]
+        flow_scenario_cols[1]
 
     capacity_bau_col = capacity_scenario_cols[0]
     capacity_nze_col = 'value_scenario_DemandMet' if 'value_scenario_DemandMet' in capacity_scenario_cols else \
-    capacity_scenario_cols[1]
+        capacity_scenario_cols[1]
 
     print(f"\nFlow BAU: {flow_bau_col}, NZE: {flow_nze_col}")
     print(f"Capacity BAU: {capacity_bau_col}, NZE: {capacity_nze_col}")
@@ -490,7 +490,7 @@ try:
 
     # Define regions and years
     regions_list = ['CHN', 'EUR', 'USA', 'ROW']
-    years = [2022,  2030, 2035]
+    years = [2022, 2030, 2035]
 
     # Extract data for each region
     data = {}
@@ -518,8 +518,8 @@ bau_colors = {'capacity': '#8E6713', 'production': '#A58542', 'demand': '#365213
 nze_colors = {'capacity': '#007894', 'production': '#3395AB', 'demand': '#365213'}
 
 # Create figure
-fig = plt.figure(figsize=(12, 12))
-gs = fig.add_gridspec(4, 3, hspace=0.2, wspace=0.25, left=0.15, right=0.99, top=0.98, bottom=0.05)
+fig = plt.figure(figsize=(14, 12))
+gs = fig.add_gridspec(3, 4, hspace=0.25, wspace=0.3, left=0.08, right=0.98, top=0.96, bottom=0.08)
 
 # X positions for discrete bars
 x_pos = np.arange(len(years))
@@ -557,19 +557,30 @@ maxCost = (max_cost_raw / cost_scale) * 1.1 if max_cost_raw > 0 else 500
 print(f"\nCost scaling: max_raw={max_cost_raw:.2e}, scale={cost_scale:.2e}, max_display={maxCost:.2f}")
 
 # LABELS A B C D
-subplot_labels = [f'{chr(ord("a") + i)}.' for i in range(len(regions_list) * 3)]
+subplot_labels = [f'{chr(ord("a") + i)}.' for i in range(12)]  # 3 rows × 4 columns
 
-
-# Plot for each region
-for row, region in enumerate(regions_list):
+# Plot for each region (now organized by columns)
+for col, region in enumerate(regions_list):
     region_data = data[region]
 
-    # BAU subplot
-    ax1 = fig.add_subplot(gs[row, 0])
+    # Region label at the top of each column
+    if region == 'CHN':
+        region_label = 'China'
+    elif region == 'EUR':
+        region_label = 'Europe'
+    elif region == 'USA':
+        region_label = 'United States'
+    elif region == 'ROW':
+        region_label = 'Rest of World'
+    else:
+        region_label = region
 
-    label_index = row * 3
+    # BAU subplot (row 0)
+    ax1 = fig.add_subplot(gs[0, col])
+
+    label_index = col
     ax1.text(0.04, 0.96, subplot_labels[label_index], transform=ax1.transAxes,
-             fontsize=12, fontweight='bold', va='top', ha='left')
+             fontsize=12, va='top', ha='left')
 
     ax1.bar(x_pos, region_data['Base']['production'], width=bar_width,
             color=bau_colors['production'], alpha=0.8)
@@ -581,17 +592,17 @@ for row, region in enumerate(regions_list):
              markeredgewidth=3)
 
     ax1.set_ylim(0, 200)
-    ax1.set_ylabel('GW', fontsize=12)
+    if col == 0:
+        ax1.set_ylabel('GW', fontsize=12)
     ax1.set_xticks(x_pos)
     ax1.set_xticklabels(years)
     ax1.grid(True, alpha=0.2)
-    if row == 0:
-        ax1.set_title('Base scenario', fontsize=12)
+    ax1.set_title(region_label, fontsize=12, fontweight='bold')
 
-    # NZE subplot
-    ax2 = fig.add_subplot(gs[row, 1])
+    # NZE subplot (row 1)
+    ax2 = fig.add_subplot(gs[1, col])
 
-    label_index = row * 3 + 1
+    label_index = col + 4
     ax2.text(0.04, 0.96, subplot_labels[label_index], transform=ax2.transAxes,
              fontsize=12, fontweight='bold', va='top', ha='left')
 
@@ -605,17 +616,16 @@ for row, region in enumerate(regions_list):
              markeredgewidth=3)
 
     ax2.set_ylim(0, 200)
-    ax2.set_ylabel('GW', fontsize=12)
+    if col == 0:
+        ax2.set_ylabel('GW', fontsize=12)
     ax2.set_xticks(x_pos)
     ax2.set_xticklabels(years)
     ax2.grid(True, alpha=0.2)
-    if row == 0:
-        ax2.set_title('Demand-met scenario', fontsize=12)
 
-    # Cost subplot
-    ax3 = fig.add_subplot(gs[row, 2])
+    # Cost subplot (row 2)
+    ax3 = fig.add_subplot(gs[2, col])
 
-    label_index = row * 3 + 2
+    label_index = col + 8
     ax3.text(0.08, 0.96, subplot_labels[label_index], transform=ax3.transAxes,
              fontsize=12, fontweight='bold', va='top', ha='right')
 
@@ -646,32 +656,25 @@ for row, region in enumerate(regions_list):
         ax3.bar(cost_x_pos[1], cost, cost_width, bottom=bottom_nze,
                 color=colors_nze[i], edgecolor='white', linewidth=0.5)
         bottom_nze += cost
-        plt.ylim(0,120)
+        plt.ylim(0, 120)
 
-    ax3.set_ylabel(cost_label, fontsize=12)
+    if col == 0:
+        ax3.set_ylabel(cost_label, fontsize=12)
     ax3.set_xticks(cost_x_pos)
     ax3.set_xticklabels(['Base', 'Demand-met'])
     ax3.set_xlim(-0.5, 1.5)
     ax3.grid(True, alpha=0.2)
-    if row == 0:
-        ax3.set_title('Cumulative Costs', fontsize=12)
 
-    # Region label
-    if region == 'CHN':
-        region_label = 'China'
-    elif region == 'EUR':
-        region_label = 'Europe'
-    elif region == 'USA':
-        region_label = 'United States'
-    elif region == 'ROW':
-        region_label = 'Rest of World'
-    else:
-        region_label = region
-    fig.text(0.05, gs[row, 0].get_position(fig).y0 +
-             (gs[row, 0].get_position(fig).y1 - gs[row, 0].get_position(fig).y0) / 2,
-             region_label, fontsize=12, va='center', ha='center')
-
-
+# Add row labels on the left side
+fig.text(0.02, gs[0, 0].get_position(fig).y0 +
+         (gs[0, 0].get_position(fig).y1 - gs[0, 0].get_position(fig).y0) / 2,
+         'Base scenario', fontsize=12, va='center', ha='center', rotation=90)
+fig.text(0.02, gs[1, 0].get_position(fig).y0 +
+         (gs[1, 0].get_position(fig).y1 - gs[1, 0].get_position(fig).y0) / 2,
+         'Demand-met scenario', fontsize=12, va='center', ha='center', rotation=90)
+fig.text(0.02, gs[2, 0].get_position(fig).y0 +
+         (gs[2, 0].get_position(fig).y1 - gs[2, 0].get_position(fig).y0) / 2,
+         'Cumulative Costs', fontsize=12, va='center', ha='center', rotation=90)
 
 # Legend - UPDATED to reflect production instead of operation
 legend_elements = [
@@ -682,13 +685,13 @@ legend_elements = [
     plt.Line2D([0], [0], marker='_', color='w', markerfacecolor='none',
                markeredgecolor='#28a745', markeredgewidth=3, markersize=8,
                label='Demand'),
-    mpatches.Patch(facecolor=(2/255, 2/255, 2/255, 1), label='Capital costs'),
-    mpatches.Patch(facecolor=(2/255, 2/255, 2/255, 0.6), label='Production costs'),
-    mpatches.Patch(facecolor=(2/255, 2/255, 2/255, 0.35), label='Importing costs'),
+    mpatches.Patch(facecolor=(2 / 255, 2 / 255, 2 / 255, 1), label='Capital costs'),
+    mpatches.Patch(facecolor=(2 / 255, 2 / 255, 2 / 255, 0.6), label='Production costs'),
+    mpatches.Patch(facecolor=(2 / 255, 2 / 255, 2 / 255, 0.35), label='Importing costs'),
 ]
 
 fig.legend(handles=legend_elements, loc='lower center',
-          ncol=6, frameon=False, fontsize=12, bbox_to_anchor=(0.5, 0.001))
+           ncol=6, frameon=False, fontsize=12, bbox_to_anchor=(0.5, 0.001))
 
 # plt.figtext(0.5, 0.005, 'Colors: BAU (orange tones), NZE (blue tones), with different opacities for cost types.',
 #             ha='center', fontsize=9, style='italic')
@@ -702,6 +705,6 @@ plt.savefig(output_dir / 'Fig1_dcp_costs_base_demandmet3.pdf', bbox_inches='tigh
 plt.show()
 
 print(f"\nPlots saved to {output_dir}/")
-print("\n" + "="*60)
+print("\n" + "=" * 60)
 print("COMPLETE")
-print("="*60)
+print("=" * 60)
