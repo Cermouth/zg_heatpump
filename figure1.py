@@ -225,7 +225,7 @@ def process_opex_data(opex_df, scenario_bau, scenario_nze):
 
     # Separate production and transport technologies
     production_df = opex_df[opex_df['technology'] == 'HP_assembly'].copy()
-    transport_df = opex_df[opex_df['technology'].str.endswith('_transport', na=False)].copy()
+    transport_df = opex_df[opex_df['technology'] == 'HP_transport'].copy()
 
     print(f"\nProduction costs (HP_assembly): {len(production_df)} rows")
     print(f"Trade costs (_transport technologies): {len(transport_df)} rows")
@@ -597,14 +597,14 @@ for col, region in enumerate(regions_list):
     ax1.set_xticks(x_pos)
     ax1.set_xticklabels(years)
     ax1.grid(True, alpha=0.2)
-    ax1.set_title(region_label, fontsize=12, fontweight='bold')
+    ax1.set_title(region_label, fontsize=12)
 
     # NZE subplot (row 1)
     ax2 = fig.add_subplot(gs[1, col])
 
     label_index = col + 4
     ax2.text(0.04, 0.96, subplot_labels[label_index], transform=ax2.transAxes,
-             fontsize=12, fontweight='bold', va='top', ha='left')
+             fontsize=12, va='top', ha='left')
 
     ax2.bar(x_pos, region_data['DemandMet']['production'], width=bar_width,
             color=nze_colors['production'], alpha=0.8)
@@ -656,7 +656,7 @@ for col, region in enumerate(regions_list):
         ax3.bar(cost_x_pos[1], cost, cost_width, bottom=bottom_nze,
                 color=colors_nze[i], edgecolor='white', linewidth=0.5)
         bottom_nze += cost
-        plt.ylim(0, 120)
+        plt.ylim(0, 70)
 
     if col == 0:
         ax3.set_ylabel(cost_label, fontsize=12)

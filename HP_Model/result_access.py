@@ -7,9 +7,9 @@ from zen_garden.postprocess.results.results import Results
 from plotting import plot_scenario_results, plot_uncertainty_results
 import os
 
-RESULTS_PATH = './outputs'
-OUTPUT_BASE_DIR = 'parameter_results'
-UNCERTAINTY_DIR = 'uncertainty_results'
+RESULTS_PATH = '../../zg_heatpump/outputs'
+OUTPUT_BASE_DIR = 'parameter_results1'
+UNCERTAINTY_DIR = 'uncertainty_results1'
 
 parameters = [
     "capacity",
@@ -110,17 +110,17 @@ def main():
 
     #try:
     results = Results(RESULTS_PATH)
-    parameters = results.get_component_names('variable')
-    # parameters = [
-    #     "capacity",
-    #     "demand",
-    #     "flow_conversion_output",
-    #     "flow_import",
-    #     "flow_transport",
-    #     "cost_opex_total",
-    #     "cost_opex_yearly",
-    #     "shed_demand"
-    # ]
+    #parameters = results.get_component_names('variable')
+    parameters = [
+        "capacity",
+        "demand",
+        "flow_conversion_output",
+        "flow_import",
+        "flow_transport",
+        "cost_opex_total",
+        "cost_opex_yearly",
+        "shed_demand"
+    ]
     parameters2 = results.get_component_names('parameter')
     set= results.get_component_names('sets')
     timesteps = results.get_total("time_steps_operation_duration")
@@ -141,6 +141,8 @@ def main():
     units_production.to_csv("units_output.csv")
     units_opex_yearly.to_csv("unit_opex")
     units_capex_yearly.to_csv("unit_capex")
+    opex_fixed.to_csv("opex_fixed.csv")
+    opex_fixed_unit.to_csv("opex_fixed_unit")
     opex_variable.to_csv("opex_variable")
     opex_var_unit.to_csv("opex_var_unit")
     a = 1
@@ -207,7 +209,7 @@ def main():
     #     print(f"Error initializing Results: {str(e)}")
     #     return
 
-    print("Data export and plotting completed!")
+    print("Data export and plotting completed")
 
 if __name__ == "__main__":
     main()

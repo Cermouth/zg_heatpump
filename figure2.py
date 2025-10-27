@@ -164,14 +164,24 @@ def process_costs_by_scenario_tech_year(capex_df, opex_df, scenario_col, target_
                                 costs_by_region_tech_year[key] = {'capex': 0, 'production': 0, 'trade': 0}
                             costs_by_region_tech_year[key]['production'] = cumulative_opex
 
-        # Trade costs
-        transport_df = opex_df[opex_df['technology'].str.endswith('_transport', na=False)].copy()
+        # Trade costs - CORRECTED LOGIC
+        transport_to_base_tech_map = {
+            'HP_transport': 'HP_assembly',
+            'HEX_transport': 'HEX_manufacturing',
+            'Compressor_transport': 'Compressor_manufacturing'
+        }
+
+        # Filter for *only* these specific transport technologies
+        transport_df = opex_df[opex_df['technology'].isin(transport_to_base_tech_map.keys())].copy()
+
         if not transport_df.empty and 'location' in transport_df.columns:
             valid_transport = transport_df[transport_df['location'].str.contains('-', na=False)].copy()
             if not valid_transport.empty:
                 valid_transport['to_node'] = valid_transport['location'].str.split('-').str[1]
                 valid_transport['region'] = valid_transport['to_node'].apply(map_to_region)
-                valid_transport['base_tech'] = valid_transport['technology'].str.replace('_transport', '')
+
+                # Use the map to create the 'base_tech' column
+                valid_transport['base_tech'] = valid_transport['technology'].map(transport_to_base_tech_map)
 
                 if 'year' in valid_transport.columns:
                     if valid_transport['year'].max() < 2000:
@@ -196,7 +206,7 @@ def process_costs_by_scenario_tech_year(capex_df, opex_df, scenario_col, target_
 
 def extract_scenario_data_multi_year(flow_df, demand_df, costs_by_region_tech_year,
                                      scenario_col, target_years=[2022, 2025, 2030, 2035]):
-    """Extract self-sufficiency and cost data by technology for multiple years"""
+    """Extract self-sufficiency and cost data by technology for multiple years, focusing on EUR and USA"""
     scenario_data = []
 
     for target_year in target_years:
@@ -210,7 +220,7 @@ def extract_scenario_data_multi_year(flow_df, demand_df, costs_by_region_tech_ye
         # Get production by region and technology
         production_by_region_tech = flow_year.groupby(['region', 'technology'])[scenario_col].sum()
 
-        for region in ['EUR']:  # Focus on Europe only
+        for region in ['EUR', 'USA']:  # Focus on Europe and USA
             demand = demand_by_region.get(region, 0)
 
             # Get all technologies for this region
@@ -257,105 +267,130 @@ def get_scenario_colors():
 
 
 def create_technology_evolution_plot(data_dict, output_dir='visualization'):
-    """Create scatter plot showing technology evolution over time in Europe
-    3 panels (one per technology), colored by scenario, with arrows showing temporal evolution"""
+    """Create scatter plot showing technology evolution over time in Europe and USA
+    2 rows (EUR/USA) x 3 panels (one per technology), colored by scenario, with arrows showing temporal evolution"""
 
     scenario_colors = get_scenario_colors()
 
     # Focus on 3 specific technologies
     focus_technologies = ['HP_assembly', 'HEX_manufacturing', 'Compressor_manufacturing']
     tech_labels = {
-        'HP_assembly': 'Heat Pump Assembly',
-        'HEX_manufacturing': 'Heat Exchanger Manufacturing',
-        'Compressor_manufacturing': 'Compressor Manufacturing'
+        'HP_assembly': 'Heat Pump',
+        'HEX_manufacturing': 'Heat Exchanger',
+        'Compressor_manufacturing': 'Compressor'
     }
+    regions_list = ['EUR', 'USA']
 
-    # Create figure with 3 panels
-    fig, axes = plt.subplots(1, 3, figsize=(12, 4))
+    # Create figure with 2 rows and 3 columns
+    fig, axes = plt.subplots(2, 3, figsize=(12, 8), constrained_layout=True)
 
-    # Plot for each technology
-    for idx, tech in enumerate(focus_technologies):
-        ax = axes[idx]
+    # Plot for each region and technology
+    for row_idx, region in enumerate(regions_list):
+        region_label = 'Europe' if region == 'EUR' else 'United States'
 
-        subplot_label = chr(97 + idx)  # 'a', 'b', 'c'
-        ax.text(0.92, 0.98, f'{subplot_label}.',
-                transform=ax.transAxes,
-                fontsize=12, fontweight='bold',
-                verticalalignment='top')
-        # Plot each scenario
-        for scenario_name in ['Base','DemandMet','SelfSuff40','Tariffs']:
-            scenario_df = data_dict[scenario_name]
+        for col_idx, tech in enumerate(focus_technologies):
+            ax = axes[row_idx, col_idx]  # Access the subplot using [row, col]
 
-            # Filter for this technology and Europe
-            tech_data = scenario_df[
-                (scenario_df['technology'] == tech) &
-                (scenario_df['region'] == 'EUR')
-                ].sort_values('year')
+            # Labeling for the subplot (e.g., 'a.', 'b.', 'c.', 'd.', 'e.', 'f.')
+            label_index = row_idx * 3 + col_idx
+            subplot_label = chr(97 + label_index)
+            ax.text(0.92, 0.98, f'{subplot_label}.',
+                    transform=ax.transAxes,
+                    fontsize=12, fontweight='bold',
+                    verticalalignment='top',
+                    ha='right')
 
-            if not tech_data.empty:
-                color = scenario_colors.get(scenario_name, '#999999')
+            # Column Titles (Technology Names) - only for the top row
+            if row_idx == 0:
+                ax.set_title(tech_labels[tech], fontsize=12)
 
-                # Need to iterate through each point to handle varying alpha values
-                for _, row in tech_data.iterrows():
-                    alpha_val = (row['year'] - 2020) / 15
-                    ax.scatter(row['self_sufficiency'],
-                               row['total_cost'],
-                               color=color,
-                               s=50, alpha=alpha_val,
-                               edgecolor='none', linewidth=1,
-                               zorder=3)
-
-                # Draw arrows connecting consecutive years
-                for i in range(len(tech_data) - 1):
-                    row_current = tech_data.iloc[i]
-                    row_next = tech_data.iloc[i + 1]
-                    alpha_val = (i + 1) / 4
-
-                    arrow = FancyArrowPatch(
-                        (row_current['self_sufficiency'], row_current['total_cost']),
-                        (row_next['self_sufficiency'], row_next['total_cost']),
-                        arrowstyle='-|>', mutation_scale=10,
-                        color=color, alpha=alpha_val, linewidth=1,
-                        zorder=2
-                    )
-                    ax.add_patch(arrow)
-
-        # Formatting
-        ax.set_xlabel('Self-Sufficiency', fontsize=12)
-        ax.set_ylabel('Cumulative Costs (Billion €)', fontsize=12)
-        ax.set_title(tech_labels[tech], fontsize=12)
-        ax.grid(True, alpha=0.2, linestyle='-')
-        ax.set_xlim(0, 1)
-        ax.set_ylim(0, 50)
-
-        # Format x-axis as percentage
-        ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'{x * 100:.0f}%'))
-
-        # Add custom text-based legend only to first panel
-        if idx == 0:
-            legend_y_start = 0.98
-            legend_y_spacing = 0.05
-
-            for i, scenario_name in enumerate(['Base','DemandMet','SelfSuff40','Tariffs']):
-                color = scenario_colors.get(scenario_name, '#999999')
-                y_pos = legend_y_start - i * legend_y_spacing
-
-                ax.text(0.02, y_pos, scenario_name,
+            # Row Labels (Region Names) - only for the left column
+            if col_idx == 0:
+                ax.text(-0.25, 0.5, region_label,
                         transform=ax.transAxes,
                         fontsize=12,
-                        color=color,
-                        verticalalignment='top')
+                        va='center', rotation=90)
+
+
+            # Plot each scenario
+            for scenario_name in ['Base','DemandMet','SelfSuff40','Tariffs']:
+                scenario_df = data_dict[scenario_name]
+
+                # Filter for this technology AND region
+                tech_data = scenario_df[
+                    (scenario_df['technology'] == tech) &
+                    (scenario_df['region'] == region)
+                    ].sort_values('year')
+
+                if not tech_data.empty:
+                    color = scenario_colors.get(scenario_name, '#999999')
+
+                    # Scatter plot with varying alpha
+                    for _, row in tech_data.iterrows():
+                        alpha_val = (row['year'] - 2020) / 15
+                        ax.scatter(row['self_sufficiency'],
+                                   row['total_cost'],
+                                   color=color,
+                                   s=50, alpha=alpha_val,
+                                   edgecolor='none', linewidth=1,
+                                   zorder=3)
+
+                    # Draw arrows connecting consecutive years
+                    for i in range(len(tech_data) - 1):
+                        row_current = tech_data.iloc[i]
+                        row_next = tech_data.iloc[i + 1]
+                        alpha_val = (i + 1) / 4
+
+                        arrow = FancyArrowPatch(
+                            (row_current['self_sufficiency'], row_current['total_cost']),
+                            (row_next['self_sufficiency'], row_next['total_cost']),
+                            arrowstyle='-|>', mutation_scale=10,
+                            color=color, alpha=alpha_val, linewidth=1,
+                            zorder=2
+                        )
+                        ax.add_patch(arrow)
+
+            # Formatting
+            ax.set_xlabel('Self-Sufficiency', fontsize=12)
+
+            # Only set Y-axis label on the left column
+            if col_idx == 0:
+                ax.set_ylabel('Cumulative Costs (Billion €)', fontsize=12)
+            else:
+                # Hide y-ticks and y-label on other columns for cleaner look
+                ax.tick_params(labelleft=False)
+
+            ax.grid(True, alpha=0.2, linestyle='-')
+            ax.set_xlim(0, 1)
+            ax.set_ylim(0, 75)
+
+            # Format x-axis as percentage
+            ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'{x * 100:.0f}%'))
+
+            # Legend: only add the text-based legend once to the top-left subplot
+            if row_idx == 0 and col_idx == 0:
+                legend_y_start = 0.98
+                legend_y_spacing = 0.05
+
+                for i, scenario_name in enumerate(['Base','DemandMet','SelfSuff40','Tariffs']):
+                    color = scenario_colors.get(scenario_name, '#999999')
+                    y_pos = legend_y_start - i * legend_y_spacing
+
+                    ax.text(0.02, y_pos, scenario_name,
+                            transform=ax.transAxes,
+                            fontsize=12,
+                            color=color,
+                            verticalalignment='top')
 
 
     # Save
     output_path = Path(output_dir)
     output_path.mkdir(exist_ok=True)
 
-    plt.savefig(output_path / 'Fig2_eur_suff_cost_3tech.png',
+    plt.savefig(output_path / 'Fig2_eur_usa_suff_cost_3tech.png',
                 dpi=300, bbox_inches='tight')
-    plt.savefig(output_path / 'Fig2_eur_suff_cost_3tech.pdf',
+    plt.savefig(output_path / 'Fig2_eur_usa_suff_cost_3tech.pdf',
                 bbox_inches='tight')
-    plt.show()
 
     print(f"\nPlots saved to {output_path}/")
 
@@ -368,10 +403,10 @@ def main():
     """Main execution function"""
 
     print("\n" + "=" * 60)
-    print("TECHNOLOGY EVOLUTION ANALYSIS - EUROPE")
+    print("TECHNOLOGY EVOLUTION ANALYSIS - EUROPE AND USA")
     print("=" * 60)
 
-    # Define file paths
+    # Define file paths (assuming they exist in the execution environment)
     flow_file = 'parameter_results/flow_conversion_output/flow_conversion_output_scenarios.csv'
     demand_file = 'ZEN-Model_HP/set_carriers/HP/demand_yearly_variation.csv'
     parameter_results_dir = 'parameter_results'
@@ -381,13 +416,27 @@ def main():
 
     # Load data
     print("\nLoading production data...")
-    flow_df = load_production_data(flow_file)
+    try:
+        flow_df = load_production_data(flow_file)
+    except FileNotFoundError:
+        print(f"Error: Flow file not found at {flow_file}")
+        return
 
     print("Loading demand data...")
-    demand_df = load_demand_data(demand_file)
+    try:
+        demand_df = load_demand_data(demand_file)
+    except FileNotFoundError:
+        print(f"Error: Demand file not found at {demand_file}")
+        return
 
     print("Loading cost data...")
     capex_df, opex_df = load_cost_data(parameter_results_dir)
+
+    # Check if cost data was loaded successfully
+    if capex_df is None or opex_df is None:
+        print("Error: Required cost data could not be loaded. Cannot proceed with cost analysis.")
+        return
+
 
     # Get scenario columns
     flow_scenario_cols = [col for col in flow_df.columns if 'value_scenario' in col]
@@ -417,13 +466,23 @@ def main():
         print(f"Number of data points: {len(scenario_data)}")
 
         # Show sample for HP_assembly in Europe
-        sample = scenario_data[
+        sample_eur = scenario_data[
             (scenario_data['technology'] == 'HP_assembly') &
             (scenario_data['region'] == 'EUR')
             ]
-        if not sample.empty:
+        if not sample_eur.empty:
             print("\nHP_assembly in Europe:")
-            print(sample[['year', 'self_sufficiency', 'total_cost']].to_string(index=False))
+            print(sample_eur[['year', 'self_sufficiency', 'total_cost']].to_string(index=False))
+
+        # Show sample for HP_assembly in USA
+        sample_usa = scenario_data[
+            (scenario_data['technology'] == 'HP_assembly') &
+            (scenario_data['region'] == 'USA')
+            ]
+        if not sample_usa.empty:
+            print("\nHP_assembly in USA:")
+            print(sample_usa[['year', 'self_sufficiency', 'total_cost']].to_string(index=False))
+
 
     # Create plots
     print("\n" + "=" * 60)
