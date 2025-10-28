@@ -412,7 +412,7 @@ def main():
     parameter_results_dir = 'parameter_results'
 
     # Define target years
-    target_years = [2022, 2030, 2035]
+    target_years = [2022,2025, 2030, 2035]
 
     # Load data
     print("\nLoading production data...")

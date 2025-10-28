@@ -8,8 +8,8 @@ from plotting import plot_scenario_results, plot_uncertainty_results
 import os
 
 RESULTS_PATH = '../../zg_heatpump/outputs'
-OUTPUT_BASE_DIR = 'parameter_results1'
-UNCERTAINTY_DIR = 'uncertainty_results1'
+OUTPUT_BASE_DIR = '../../zg_heatpump/parameter_results'
+UNCERTAINTY_DIR = '../../zg_heatpump/uncertainty_results'
 
 parameters = [
     "capacity",
@@ -110,17 +110,17 @@ def main():
 
     #try:
     results = Results(RESULTS_PATH)
-    #parameters = results.get_component_names('variable')
-    parameters = [
-        "capacity",
-        "demand",
-        "flow_conversion_output",
-        "flow_import",
-        "flow_transport",
-        "cost_opex_total",
-        "cost_opex_yearly",
-        "shed_demand"
-    ]
+    parameters = results.get_component_names('variable')
+    # parameters = [
+    #     "capacity",
+    #     "demand",
+    #     "flow_conversion_output",
+    #     "flow_import",
+    #     "flow_transport",
+    #     "cost_opex_total",
+    #     "cost_opex_yearly",
+    #     "shed_demand"
+    # ]
     parameters2 = results.get_component_names('parameter')
     set= results.get_component_names('sets')
     timesteps = results.get_total("time_steps_operation_duration")

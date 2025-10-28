@@ -490,7 +490,7 @@ try:
 
     # Define regions and years
     regions_list = ['CHN', 'EUR', 'USA', 'ROW']
-    years = [2022, 2030, 2035]
+    years = [2022,2025, 2030, 2035]
 
     # Extract data for each region
     data = {}
@@ -656,7 +656,7 @@ for col, region in enumerate(regions_list):
         ax3.bar(cost_x_pos[1], cost, cost_width, bottom=bottom_nze,
                 color=colors_nze[i], edgecolor='white', linewidth=0.5)
         bottom_nze += cost
-        plt.ylim(0, 70)
+        plt.ylim(0, 60)
 
     if col == 0:
         ax3.set_ylabel(cost_label, fontsize=12)
@@ -683,7 +683,7 @@ legend_elements = [
                label='Capacity'),
     mpatches.Patch(facecolor='#959595', label='Production (bars)'),
     plt.Line2D([0], [0], marker='_', color='w', markerfacecolor='none',
-               markeredgecolor='#28a745', markeredgewidth=3, markersize=8,
+               markeredgecolor='#365213', markeredgewidth=3, markersize=8,
                label='Demand'),
     mpatches.Patch(facecolor=(2 / 255, 2 / 255, 2 / 255, 1), label='Capital costs'),
     mpatches.Patch(facecolor=(2 / 255, 2 / 255, 2 / 255, 0.6), label='Production costs'),
