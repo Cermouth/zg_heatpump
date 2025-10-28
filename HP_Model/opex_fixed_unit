@@ -1,0 +1,42 @@
+technology,capacity_type,0
+Aluminium_production,power,kiloEuro * year / kiloton
+Aluminium_storage,energy,kiloEuro / kiloton
+Aluminium_storage,power,kiloEuro * year / kiloton
+Aluminium_transport,power,kiloEuro * year / kiloton
+Bauxite_mining,power,kiloEuro * year / kiloton
+Bauxite_storage,energy,kiloEuro / kiloton
+Bauxite_storage,power,kiloEuro * year / kiloton
+Bauxite_transport,power,kiloEuro * year / kiloton
+Compressor_manufacturing,power,kiloEuro / gigawatt
+Compressor_storage,energy,kiloEuro / gigawatt / year
+Compressor_storage,power,kiloEuro / gigawatt
+Compressor_transport,power,kiloEuro / gigawatt
+Copper_mining,power,kiloEuro * year / kiloton
+Copper_ore_transport,power,kiloEuro * year / kiloton
+Copper_recycling,power,kiloEuro * year / kiloton
+Copper_refinement,power,kiloEuro * year / kiloton
+Copper_storage,energy,kiloEuro / kiloton
+Copper_storage,power,kiloEuro * year / kiloton
+Copper_transport,power,kiloEuro * year / kiloton
+HEX_manufacturing,power,kiloEuro / gigawatt
+HEX_storage,energy,kiloEuro / gigawatt / year
+HEX_storage,power,kiloEuro / gigawatt
+HEX_transport,power,kiloEuro / gigawatt
+HP_assembly,power,kiloEuro / gigawatt
+HP_storage,energy,kiloEuro / gigawatt / year
+HP_storage,power,kiloEuro / gigawatt
+HP_transport,power,kiloEuro / gigawatt
+Iron_mining,power,kiloEuro * year / kiloton
+Iron_storage,energy,kiloEuro / kiloton
+Iron_storage,power,kiloEuro * year / kiloton
+Iron_transport,power,kiloEuro * year / kiloton
+Nickel_mining,power,kiloEuro * year / kiloton
+Nickel_recycling,power,kiloEuro * year / kiloton
+Nickel_storage,energy,kiloEuro / kiloton
+Nickel_storage,power,kiloEuro * year / kiloton
+Nickel_transport,power,kiloEuro * year / kiloton
+Refrigerant_transport,power,kiloEuro * year / kiloton
+Steel_production,power,kiloEuro * year / kiloton
+Steel_storage,energy,kiloEuro / kiloton
+Steel_storage,power,kiloEuro * year / kiloton
+Steel_transport,power,kiloEuro * year / kiloton
