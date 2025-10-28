@@ -46,14 +46,14 @@ for i, scenario in enumerate(df_melted['Scenario'].unique()):#['Tariffs','FastDi
     subset = df_melted[df_melted['Scenario'] == scenario]
     color = color_map.get(scenario, 'gray')
     ax.scatter(subset['location'], subset['LCOHP (Euro)'],
-               s=150, edgecolor=color, facecolor=color,#alpha=0.5,
-               linewidth=1, marker='_')
+               s=150, edgecolor=color, facecolor='none',#color,alpha=0.5,
+               linewidth=1, marker='o')
                #marker=markers[i % len(markers)])
     plt.ylim(80,320)
 
 # Title and axes labels
 ax.set_xlabel("Region", fontsize=12)
-ax.set_ylabel("LCOHP (Euro)", fontsize=12)
+ax.set_ylabel("LCOHP (€/kW)", fontsize=12)
 ax.set_xticklabels(ax.get_xticklabels(), rotation=0)
 ax.grid(True, linestyle='--', alpha=0.2)
 

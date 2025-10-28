@@ -4,12 +4,12 @@ import numpy as np
 from sqlalchemy import false
 
 from zen_garden.postprocess.results.results import Results
-from plotting import plot_scenario_results, plot_uncertainty_results
+#from plotting import plot_scenario_results, plot_uncertainty_results
 import os
 
-RESULTS_PATH = '../../zg_heatpump/outputs'
-OUTPUT_BASE_DIR = '../../zg_heatpump/parameter_results'
-UNCERTAINTY_DIR = '../../zg_heatpump/uncertainty_results'
+RESULTS_PATH = 'outputs'
+OUTPUT_BASE_DIR = 'parameter_results'
+UNCERTAINTY_DIR = 'uncertainty_results'
 
 parameters = [
     "capacity",
@@ -146,7 +146,7 @@ def main():
     opex_variable.to_csv("opex_variable")
     opex_var_unit.to_csv("opex_var_unit")
     a = 1
-    for parameter in parameters:
+    for parameter in parameters and parameters2:
         try:
             df_dict = results.get_df(parameter)
             if df_dict is None:

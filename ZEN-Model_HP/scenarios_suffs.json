@@ -1,0 +1,152 @@
+{
+  "SelfSuff30": {
+    "HP": {
+      "local_production_share": {
+        "file": "local_production_share_03"
+      },
+      "price_shed_demand": {
+        "file": "price_shed_demand_S1"
+      }
+    },
+    "Compressor": {
+      "local_production_share": {
+        "file": "local_production_share_03"
+      }
+    },
+    "HEX": {
+      "local_production_share": {
+        "file": "local_production_share_03"
+      }
+    },
+    "HP_assembly": {
+      "capacity_limit": {
+        "file": "capacity_limit_S2"
+      }
+    }
+  },
+  "SelfSuff50": {
+    "HP": {
+      "local_production_share": {
+        "file": "local_production_share_05"
+      },
+      "price_shed_demand": {
+        "file": "price_shed_demand_S1"
+      }
+    },
+    "Compressor": {
+      "local_production_share": {
+        "file": "local_production_share_05"
+      }
+    },
+    "HEX": {
+      "local_production_share": {
+        "file": "local_production_share_05"
+      }
+    },
+    "HP_assembly": {
+      "capacity_limit": {
+        "file": "capacity_limit_S2"
+      }
+    }
+  },
+  "SelfSuff60": {
+    "HP": {
+      "local_production_share": {
+        "file": "local_production_share_06"
+      },
+      "price_shed_demand": {
+        "file": "price_shed_demand_S1"
+      }
+    },
+    "Compressor": {
+      "local_production_share": {
+        "file": "local_production_share_06"
+      }
+    },
+    "HEX": {
+      "local_production_share": {
+        "file": "local_production_share_06"
+      }
+    },
+    "HP_assembly": {
+      "capacity_limit": {
+        "file": "capacity_limit_S2"
+      }
+    }
+  },
+  "SelfSuff70": {
+    "HP": {
+      "local_production_share": {
+        "file": "local_production_share_07"
+      },
+      "price_shed_demand": {
+        "file": "price_shed_demand_S1"
+      }
+    },
+    "Compressor": {
+      "local_production_share": {
+        "file": "local_production_share_07"
+      }
+    },
+    "HEX": {
+      "local_production_share": {
+        "file": "local_production_share_07"
+      }
+    },
+    "HP_assembly": {
+      "capacity_limit": {
+        "file": "capacity_limit_S2"
+      }
+    }
+  },
+  "SelfSuff80": {
+    "HP": {
+      "local_production_share": {
+        "file": "local_production_share_08"
+      },
+      "price_shed_demand": {
+        "file": "price_shed_demand_S1"
+      }
+    },
+    "Compressor": {
+      "local_production_share": {
+        "file": "local_production_share_08"
+      }
+    },
+    "HEX": {
+      "local_production_share": {
+        "file": "local_production_share_08"
+      }
+    },
+    "HP_assembly": {
+      "capacity_limit": {
+        "file": "capacity_limit_S2"
+      }
+    }
+  },
+  "SelfSuff90": {
+    "HP": {
+      "local_production_share": {
+        "file": "local_production_share_09"
+      },
+      "price_shed_demand": {
+        "file": "price_shed_demand_S1"
+      }
+    },
+    "Compressor": {
+      "local_production_share": {
+        "file": "local_production_share_09"
+      }
+    },
+    "HEX": {
+      "local_production_share": {
+        "file": "local_production_share_09"
+      }
+    },
+    "HP_assembly": {
+      "capacity_limit": {
+        "file": "capacity_limit_S2"
+      }
+    }
+  }
+}
