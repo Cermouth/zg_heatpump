@@ -41,7 +41,7 @@ scenarios <- c('Base', 'DemandMet', 'SelfSuff40', 'Tariffs')
 technologies <- c('Hp Assembly', 'Hex Manufacturing', 'Compressor Manufacturing')
 
 # Create combined PDF with all scenarios and technologies
-pdf(paste0(output_dir, '/_chord_all_scenarios_2035.pdf'), height = 10, width = 10)
+pdf(paste0(output_dir, '/chord_all_scenarios_2035.pdf'), height = 10, width = 10)
 par(mfrow = c(4, 3), mar = rep(0.1, 4))
 
 # Loop through scenarios and technologies
@@ -74,15 +74,15 @@ for (sce in scenarios) {
                    link.sort = TRUE,
                    link.largest.ontop = TRUE)
       
-      # circos.trackPlotRegion(track.index = 1, panel.fun = function(x, y) {
-      #   xlim = get.cell.meta.data("xlim")
-      #   ylim = get.cell.meta.data("ylim")
-      #   sector.name = get.cell.meta.data("sector.index")
-      #   circos.text(mean(xlim), ylim[1] + 0.1, sector.name, 
-      #               facing = "clockwise", niceFacing = TRUE, 
-      #               adj = c(-0.5, 0.5), cex = 0.6)
-      # })
-      # 
+      circos.trackPlotRegion(track.index = 1, panel.fun = function(x, y) {
+        xlim = get.cell.meta.data("xlim")
+        ylim = get.cell.meta.data("ylim")
+        sector.name = get.cell.meta.data("sector.index")
+        circos.text(mean(xlim), ylim[1] + 0.1, sector.name,
+                    facing = "clockwise", niceFacing = TRUE,
+                    adj = c(-0.5, 0.5), cex = 0.6)
+      })
+
       title(main = paste(sce, tech), cex.main = 0.8)
     }
     
