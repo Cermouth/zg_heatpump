@@ -53,7 +53,7 @@ for i, scenario in enumerate(df_melted['Scenario'].unique()):#['Tariffs','FastDi
 
 # Title and axes labels
 ax.set_xlabel("Region", fontsize=12)
-ax.set_ylabel("LCOHP (€/kW)", fontsize=12)
+ax.set_ylabel("LCOHP (â‚¬/kW)", fontsize=12)
 ax.set_xticklabels(ax.get_xticklabels(), rotation=0)
 ax.grid(True, linestyle='--', alpha=0.2)
 
@@ -73,10 +73,29 @@ for i, scenario_name in enumerate(['Base', 'DemandMet', 'SelfSuff40', 'Tariffs',
 
 plt.tight_layout()
 
-# === Save and show ===
+# ====================================
+# EXPORT DATA TO CSV
+# ====================================
+
+print("\n" + "=" * 60)
+print("EXPORTING DATA TO CSV")
+print("=" * 60)
+
+# Export the melted dataframe (which contains all the plot data)
 output_dir = Path('visualization')
 output_dir.mkdir(exist_ok=True)
 
+df_melted.to_csv(output_dir / 'Fig3_lcohp_data.csv', index=False)
+print(f"Exported LCOHP data to {output_dir / 'Fig3_lcohp_data.csv'}")
+
+# Also export the original wide format for convenience
+df.to_csv(output_dir / 'Fig3_lcohp_data_wide.csv', index=False)
+print(f"Exported LCOHP data (wide format) to {output_dir / 'Fig3_lcohp_data_wide.csv'}")
+
+print("CSV export complete!")
+print("=" * 60)
+
+# === Save and show ===
 fig.savefig(output_dir / 'Fig3_lcohp_byregion.png', dpi=330, bbox_inches='tight')
 fig.savefig(output_dir / 'Fig3_lcohp_byregion.pdf', bbox_inches='tight')
 plt.show()
