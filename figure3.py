@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
+import numpy as np
 
 plt.rcParams['font.family'] = 'arial'
 plt.rcParams['font.size'] = 12
@@ -45,14 +46,14 @@ for i, scenario in enumerate(df_melted['Scenario'].unique()):#['Tariffs','FastDi
     subset = df_melted[df_melted['Scenario'] == scenario]
     color = color_map.get(scenario, 'gray')
     ax.scatter(subset['location'], subset['LCOHP (Euro)'],
-               s=150, edgecolor=color, facecolor=color,#alpha=0.5,
-               linewidth=1, marker='x')
+               s=150, edgecolor=color, facecolor='none',#color,alpha=0.5,
+               linewidth=1, marker='o')
                #marker=markers[i % len(markers)])
-    plt.ylim(100,400)
+    plt.ylim(80,320)
 
 # Title and axes labels
 ax.set_xlabel("Region", fontsize=12)
-ax.set_ylabel("LCOHP (Euro)", fontsize=12)
+ax.set_ylabel("LCOHP (â‚¬/kW)", fontsize=12)
 ax.set_xticklabels(ax.get_xticklabels(), rotation=0)
 ax.grid(True, linestyle='--', alpha=0.2)
 
@@ -72,12 +73,85 @@ for i, scenario_name in enumerate(['Base', 'DemandMet', 'SelfSuff40', 'Tariffs',
 
 plt.tight_layout()
 
-# === Save and show ===
+# ====================================
+# EXPORT DATA TO CSV
+# ====================================
+
+print("\n" + "=" * 60)
+print("EXPORTING DATA TO CSV")
+print("=" * 60)
+
+# Export the melted dataframe (which contains all the plot data)
 output_dir = Path('visualization')
 output_dir.mkdir(exist_ok=True)
 
+df_melted.to_csv(output_dir / 'Fig3_lcohp_data.csv', index=False)
+print(f"Exported LCOHP data to {output_dir / 'Fig3_lcohp_data.csv'}")
+
+# Also export the original wide format for convenience
+df.to_csv(output_dir / 'Fig3_lcohp_data_wide.csv', index=False)
+print(f"Exported LCOHP data (wide format) to {output_dir / 'Fig3_lcohp_data_wide.csv'}")
+
+print("CSV export complete!")
+print("=" * 60)
+
+# === Save and show ===
 fig.savefig(output_dir / 'Fig3_lcohp_byregion.png', dpi=330, bbox_inches='tight')
 fig.savefig(output_dir / 'Fig3_lcohp_byregion.pdf', bbox_inches='tight')
 plt.show()
 
 print(f"\nPlots saved to {output_dir}/")
+
+
+# df = df.set_index('location')
+#
+# # Reorder scenarios as desired
+# scenario_order = ['Base', 'DemandMet', 'SelfSuff40', 'Tariffs', 'FastDiffusion', 'Recycling']
+# df = df[scenario_order]
+#
+# # Transpose so scenarios are on y-axis and regions on x-axis
+# df_transposed = df.T
+#
+# # === Create Heatmap ===
+# fig, ax = plt.subplots(figsize=(10, 6))
+#
+# # Create heatmap
+# im = ax.imshow(df_transposed.values, cmap='YlOrRd', aspect='auto', vmin=0, vmax=350)
+#
+# # Set ticks and labels
+# ax.set_xticks(np.arange(len(df_transposed.columns)))
+# ax.set_yticks(np.arange(len(df_transposed.index)))
+# ax.set_xticklabels(df_transposed.columns)
+# ax.set_yticklabels(df_transposed.index)
+#
+# # Rotate x-axis labels if needed
+# plt.setp(ax.get_xticklabels(), rotation=45, ha="right", rotation_mode="anchor")
+#
+# # Add text annotations with values
+# for i in range(len(df_transposed.index)):
+#     for j in range(len(df_transposed.columns)):
+#         value = df_transposed.values[i, j]
+#         # Choose text color based on background intensity
+#         text_color = 'white' if value > 175 else 'black'
+#         text = ax.text(j, i, f'{value:.0f}',
+#                       ha="center", va="center", color=text_color, fontsize=10)
+#
+# # Labels
+# ax.set_xlabel("Region", fontsize=12)
+# ax.set_ylabel("Scenario", fontsize=12)
+#
+# # Add colorbar
+# cbar = plt.colorbar(im, ax=ax, pad=0.02)
+# cbar.set_label('LCOHP (Euro)', rotation=270, labelpad=20, fontsize=12)
+#
+# plt.tight_layout()
+#
+# # === Save and show ===
+# output_dir = Path('visualization')
+# output_dir.mkdir(exist_ok=True)
+#
+# fig.savefig(output_dir / 'Fig3_lcohp_heatmap.png', dpi=330, bbox_inches='tight')
+# fig.savefig(output_dir / 'Fig3_lcohp_heatmap.pdf', bbox_inches='tight')
+# plt.show()
+#
+# print(f"\nHeatmap saved to {output_dir}/")

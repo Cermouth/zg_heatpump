@@ -490,7 +490,7 @@ try:
 
     # Define regions and years
     regions_list = ['CHN', 'EUR', 'USA', 'ROW']
-    years = [2022, 2030, 2035]
+    years = [2022, 2025, 2030, 2035]
 
     # Extract data for each region
     data = {}
@@ -557,7 +557,7 @@ maxCost = (max_cost_raw / cost_scale) * 1.1 if max_cost_raw > 0 else 500
 print(f"\nCost scaling: max_raw={max_cost_raw:.2e}, scale={cost_scale:.2e}, max_display={maxCost:.2f}")
 
 # LABELS A B C D
-subplot_labels = [f'{chr(ord("a") + i)}.' for i in range(12)]  # 3 rows × 4 columns
+subplot_labels = [f'{chr(ord("a") + i)}.' for i in range(12)]  # 3 rows Ã— 4 columns
 
 # Plot for each region (now organized by columns)
 for col, region in enumerate(regions_list):
@@ -571,7 +571,7 @@ for col, region in enumerate(regions_list):
     elif region == 'USA':
         region_label = 'United States'
     elif region == 'ROW':
-        region_label = 'Rest of World'
+        region_label = 'Other regions'
     else:
         region_label = region
 
@@ -656,7 +656,7 @@ for col, region in enumerate(regions_list):
         ax3.bar(cost_x_pos[1], cost, cost_width, bottom=bottom_nze,
                 color=colors_nze[i], edgecolor='white', linewidth=0.5)
         bottom_nze += cost
-        plt.ylim(0, 70)
+        plt.ylim(0, 60)
 
     if col == 0:
         ax3.set_ylabel(cost_label, fontsize=12)
@@ -683,7 +683,7 @@ legend_elements = [
                label='Capacity'),
     mpatches.Patch(facecolor='#959595', label='Production (bars)'),
     plt.Line2D([0], [0], marker='_', color='w', markerfacecolor='none',
-               markeredgecolor='#28a745', markeredgewidth=3, markersize=8,
+               markeredgecolor='#365213', markeredgewidth=3, markersize=8,
                label='Demand'),
     mpatches.Patch(facecolor=(2 / 255, 2 / 255, 2 / 255, 1), label='Capital costs'),
     mpatches.Patch(facecolor=(2 / 255, 2 / 255, 2 / 255, 0.6), label='Production costs'),
@@ -696,10 +696,84 @@ fig.legend(handles=legend_elements, loc='lower center',
 # plt.figtext(0.5, 0.005, 'Colors: BAU (orange tones), NZE (blue tones), with different opacities for cost types.',
 #             ha='center', fontsize=9, style='italic')
 
-# Save
+# ====================================
+# EXPORT DATA TO CSV
+# ====================================
+
+print("\n" + "=" * 60)
+print("EXPORTING DATA TO CSV")
+print("=" * 60)
+
+# Prepare data for export
+export_data = []
+
+for region in regions_list:
+    region_data = data[region]
+
+    # Export capacity, production, and demand for Base scenario
+    for i, year in enumerate(years):
+        export_data.append({
+            'region': region,
+            'year': year,
+            'scenario': 'Base',
+            'capacity_GW': region_data['Base']['capacity'][i],
+            'production_GW': region_data['Base']['production'][i],
+            'demand_GW': region_data['Base']['demand'][i]
+        })
+
+    # Export capacity, production, and demand for DemandMet scenario
+    for i, year in enumerate(years):
+        export_data.append({
+            'region': region,
+            'year': year,
+            'scenario': 'DemandMet',
+            'capacity_GW': region_data['DemandMet']['capacity'][i],
+            'production_GW': region_data['DemandMet']['production'][i],
+            'demand_GW': region_data['DemandMet']['demand'][i]
+        })
+
+# Export capacity/production/demand data
+df_export = pd.DataFrame(export_data)
 output_dir = Path('visualization')
 output_dir.mkdir(exist_ok=True)
+df_export.to_csv(output_dir / 'Fig1_capacity_production_demand_data.csv', index=False)
+print(f"Exported capacity/production/demand data to {output_dir / 'Fig1_capacity_production_demand_data.csv'}")
 
+# Prepare cost data for export
+cost_data = []
+
+for region in regions_list:
+    region_costs = data[region]['costs']
+
+    # Base scenario costs
+    cost_data.append({
+        'region': region,
+        'scenario': 'Base',
+        'capital_cost': region_costs['Base'][0],
+        'production_cost': region_costs['Base'][1],
+        'importing_cost': region_costs['Base'][2],
+        'total_cost': sum(region_costs['Base'])
+    })
+
+    # DemandMet scenario costs
+    cost_data.append({
+        'region': region,
+        'scenario': 'DemandMet',
+        'capital_cost': region_costs['DemandMet'][0],
+        'production_cost': region_costs['DemandMet'][1],
+        'importing_cost': region_costs['DemandMet'][2],
+        'total_cost': sum(region_costs['DemandMet'])
+    })
+
+# Export cost data
+df_costs = pd.DataFrame(cost_data)
+df_costs.to_csv(output_dir / 'Fig1_cumulative_costs_data.csv', index=False)
+print(f"Exported cumulative costs data to {output_dir / 'Fig1_cumulative_costs_data.csv'}")
+
+print("CSV export complete!")
+print("=" * 60)
+
+# Save plots
 plt.savefig(output_dir / 'Fig1_dcp_costs_base_demandmet3.png', dpi=330, bbox_inches='tight')
 plt.savefig(output_dir / 'Fig1_dcp_costs_base_demandmet3.pdf', bbox_inches='tight')
 plt.show()

@@ -6,6 +6,7 @@ Organization: Laboratory of Reliability and Risk Engineering, ETH Zurich
 
 Description:  Model settings. Overwrite default values defined in default_config.py here.
 ==========================================================================================================================================================================="""
+#$env:GRB_LICENSE_FILE = "C:\gurobi\gurobi.lic"
 
 ## System - Default dictionary
 system = dict()

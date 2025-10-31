@@ -235,7 +235,7 @@ def extract_scenario_data_multi_year(flow_df, demand_df, costs_by_region_tech_ye
                 # Get costs for this region-technology-year combination
                 costs = costs_by_region_tech_year.get((region, tech, target_year),
                                                       {'capex': 0, 'production': 0, 'trade': 0})
-                total_cost = sum(costs.values()) / 1000000  # Convert to billion €
+                total_cost = sum(costs.values()) / 1000000  # Convert to billion â‚¬
 
                 scenario_data.append({
                     'region': region,
@@ -311,9 +311,8 @@ def create_technology_evolution_plot(data_dict, output_dir='visualization'):
                         fontsize=12,
                         va='center', rotation=90)
 
-
             # Plot each scenario
-            for scenario_name in ['Base','DemandMet','SelfSuff40','Tariffs']:
+            for scenario_name in ['Base', 'DemandMet', 'SelfSuff40', 'Tariffs']:
                 scenario_df = data_dict[scenario_name]
 
                 # Filter for this technology AND region
@@ -355,13 +354,13 @@ def create_technology_evolution_plot(data_dict, output_dir='visualization'):
 
             # Only set Y-axis label on the left column
             if col_idx == 0:
-                ax.set_ylabel('Cumulative Costs (Billion €)', fontsize=12)
+                ax.set_ylabel('Cumulative Costs (Billion â‚¬)', fontsize=12)
             else:
                 # Hide y-ticks and y-label on other columns for cleaner look
                 ax.tick_params(labelleft=False)
 
             ax.grid(True, alpha=0.2, linestyle='-')
-            ax.set_xlim(0, 1)
+            ax.set_xlim(-0.02, 1.02)
             ax.set_ylim(0, 75)
 
             # Format x-axis as percentage
@@ -372,7 +371,7 @@ def create_technology_evolution_plot(data_dict, output_dir='visualization'):
                 legend_y_start = 0.98
                 legend_y_spacing = 0.05
 
-                for i, scenario_name in enumerate(['Base','DemandMet','SelfSuff40','Tariffs']):
+                for i, scenario_name in enumerate(['Base', 'DemandMet', 'SelfSuff40', 'Tariffs']):
                     color = scenario_colors.get(scenario_name, '#999999')
                     y_pos = legend_y_start - i * legend_y_spacing
 
@@ -382,11 +381,46 @@ def create_technology_evolution_plot(data_dict, output_dir='visualization'):
                             color=color,
                             verticalalignment='top')
 
+    # ====================================
+    # EXPORT DATA TO CSV
+    # ====================================
 
-    # Save
+    print("\n" + "=" * 60)
+    print("EXPORTING DATA TO CSV")
+    print("=" * 60)
+
+    # Combine all scenario data for export
+    export_data = []
+
+    for scenario_name, scenario_df in data_dict.items():
+        scenario_df_copy = scenario_df.copy()
+        scenario_df_copy['scenario'] = scenario_name
+        export_data.append(scenario_df_copy)
+
+    # Concatenate all scenarios
+    combined_df = pd.concat(export_data, ignore_index=True)
+
+    # Select relevant columns for export
+    columns_to_export = ['scenario', 'technology', 'region', 'year',
+                         'production', 'demand', 'self_sufficiency',
+                         'capex', 'production_cost', 'trade_cost', 'total_cost']
+
+    # Filter to only include columns that exist
+    columns_to_export = [col for col in columns_to_export if col in combined_df.columns]
+
+    # Export to CSV
     output_path = Path(output_dir)
     output_path.mkdir(exist_ok=True)
 
+    combined_df[columns_to_export].to_csv(
+        output_path / 'Fig2_technology_evolution_data.csv',
+        index=False
+    )
+    print(f"Exported technology evolution data to {output_path / 'Fig2_technology_evolution_data.csv'}")
+    print("CSV export complete!")
+    print("=" * 60)
+
+    # Save plots
     plt.savefig(output_path / 'Fig2_eur_usa_suff_cost_3tech.png',
                 dpi=300, bbox_inches='tight')
     plt.savefig(output_path / 'Fig2_eur_usa_suff_cost_3tech.pdf',
@@ -412,7 +446,7 @@ def main():
     parameter_results_dir = 'parameter_results'
 
     # Define target years
-    target_years = [2022, 2030, 2035]
+    target_years = [2022, 2025, 2030, 2035]
 
     # Load data
     print("\nLoading production data...")
@@ -436,7 +470,6 @@ def main():
     if capex_df is None or opex_df is None:
         print("Error: Required cost data could not be loaded. Cannot proceed with cost analysis.")
         return
-
 
     # Get scenario columns
     flow_scenario_cols = [col for col in flow_df.columns if 'value_scenario' in col]
@@ -482,7 +515,6 @@ def main():
         if not sample_usa.empty:
             print("\nHP_assembly in USA:")
             print(sample_usa[['year', 'self_sufficiency', 'total_cost']].to_string(index=False))
-
 
     # Create plots
     print("\n" + "=" * 60)
