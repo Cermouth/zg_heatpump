@@ -571,7 +571,7 @@ for col, region in enumerate(regions_list):
     elif region == 'USA':
         region_label = 'United States'
     elif region == 'ROW':
-        region_label = 'Rest of World'
+        region_label = 'Other regions'
     else:
         region_label = region
 

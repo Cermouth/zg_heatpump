@@ -3,7 +3,7 @@ library(circlize)
 library(dplyr)
 setwd('C:/Users/cancui/OneDrive - ETH Zurich/Dokumente/GitHub/zg_heatpump/r_export')
 # Define colors for regions (ETH Color Scheme)
-all_regions <- c('CHN', 'JPN', 'KOR', 'ROA', 'EUR', 'DEU', 'ITA', 'AUT', 'CZE', 'ROE', 'USA', 'BRA', 'AUS', 'ROW')
+all_regions <- c('CHN', 'JPN', 'KOR', 'DEU', 'ITA', 'AUT', 'CZE', 'ROE', 'USA', 'BRA', 'AUS', 'ROW')
 
 mycolors <- c(
   '#8C0A59',  # CHN - ETH Purple 120%
@@ -36,17 +36,18 @@ all_data <- all_data %>%
   mutate(From = factor(From, levels = all_regions),
          To = factor(To, levels = all_regions))
 
+
 # Define scenarios and technologies
 scenarios <- c('Base', 'DemandMet', 'SelfSuff40', 'Tariffs')
 technologies <- c('Hp Assembly', 'Hex Manufacturing', 'Compressor Manufacturing')
 
 # Create combined PDF with all scenarios and technologies
 pdf(paste0(output_dir, '/chord_all_scenarios_2035.pdf'), height = 10, width = 10)
-par(mfrow = c(4, 3), mar = rep(0.1, 4))
+par(mfrow = c(3, 4), mar = rep(0.1, 4))
 
 # Loop through scenarios and technologies
-for (sce in scenarios) {
-  for (tech in technologies) {
+for (tech in technologies) {
+  for (sce in scenarios) {
     
     # Filter data for this scenario and technology
     data_subset <- all_data %>%
@@ -60,6 +61,7 @@ for (sce in scenarios) {
                  points.overflow.warning = FALSE)
       
       chordDiagram(data_subset,
+                   order = all_regions,
                    grid.col = color_mapping,
                    grid.border = NA,
                    transparency = 0.25,
